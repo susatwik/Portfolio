@@ -1,5 +1,7 @@
 # Susatwik Manuri — Cinematic Developer Portfolio
 
+**Live Website:** [https://susatwikmanuri.vercel.app](https://susatwikmanuri.vercel.app)
+
 A dark, cinematic developer portfolio featuring an interactive WebGL/2D Canvas neural particle portrait intro, scroll-scrubbed interactive SVG journey timeline, full-stack and AI/ML project showcases, verified credentials & leadership timeline, and a production-grade serverless contact experience with direct SMTP email delivery.
 
 ---

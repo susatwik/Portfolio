@@ -262,7 +262,7 @@ module.exports = async function handler(req, res) {
     </tr>
     <tr>
       <td style="padding:16px 32px;background-color:#050608;border-top:1px solid #141B26;text-align:center;font-size:11px;color:#61728B;">
-        Sent via Susatwik Manuri Portfolio Contact Form (<a href="https://susatwik.dev" style="color:#7A96BA;text-decoration:none;">susatwik.dev</a>)
+        Sent via Susatwik Manuri Portfolio Contact Form (<a href="https://susatwikmanuri.vercel.app" style="color:#7A96BA;text-decoration:none;">susatwikmanuri.vercel.app</a>)
       </td>
     </tr>
   </table>
@@ -284,7 +284,7 @@ ${message}
 ---------------------------------------------------
 
 Reply directly to this email to respond to ${name}.
-Sent via Portfolio Contact Form
+Sent via Susatwik Manuri Portfolio Contact Form (https://susatwikmanuri.vercel.app)
 `.trim();
 
     // 7. Dispatch via Direct SMTP using Nodemailer

@@ -1164,6 +1164,25 @@ async function runAll() {
     sentMailOptions.replyTo === 'alex.rivera@techfirm.io' &&
     sentMailOptions.subject.includes('Socratic Agent Architecture Collaboration'));
 
+  test('Contact email template footer displays authentic susatwikmanuri.vercel.app branding without susatwik.dev',
+    sentMailOptions &&
+    sentMailOptions.html.includes('susatwikmanuri.vercel.app') &&
+    sentMailOptions.html.includes('Sent via Susatwik Manuri Portfolio Contact Form') &&
+    !sentMailOptions.html.includes('susatwik.dev') &&
+    sentMailOptions.text.includes('susatwikmanuri.vercel.app') &&
+    !sentMailOptions.text.includes('susatwik.dev'));
+
+  const contactJsCode = fs.readFileSync(path.join(rootDir, 'api/contact.js'), 'utf8');
+  test('api/contact.js source contains susatwikmanuri.vercel.app and no susatwik.dev',
+    contactJsCode.includes('susatwikmanuri.vercel.app') &&
+    !contactJsCode.includes('susatwik.dev'));
+
+  test('index.html and projects.html include canonical and og:url for https://susatwikmanuri.vercel.app',
+    html.includes('https://susatwikmanuri.vercel.app/') &&
+    html.includes('rel="canonical" href="https://susatwikmanuri.vercel.app/"') &&
+    projectsHtml.includes('https://susatwikmanuri.vercel.app/projects.html') &&
+    projectsHtml.includes('rel="canonical" href="https://susatwikmanuri.vercel.app/projects.html"'));
+
   // SMTP send failure handling
   nodemailer.createTransport = function(config) {
     return {
