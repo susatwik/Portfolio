@@ -1,0 +1,2269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050608" />
+  <meta name="description" content="Susatwik Manuri — Software Developer, Full-Stack Developer, and AI/ML Enthusiast." />
+  <meta property="og:title" content="Susatwik Manuri — Software Developer" />
+  <meta property="og:description" content="Cinematic portfolio featuring neural particle portraiture, full-stack engineering, and AI/ML projects." />
+  <title>Susatwik Manuri — Software Developer · AI/ML Enthusiast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <!-- Skip Intro Button -->
+  <button class="skip-intro" id="skip-intro-btn" type="button" aria-label="Skip introduction">Skip intro <span>↗</span></button>
+
+  <!-- Primary Site Navbar -->
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#top" aria-label="Susatwik Manuri home">SUSATWIK MANURI</a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#journey">Journey</a>
+      <a href="#work">Work</a>
+      <a href="#credentials">Leadership</a>
+      <a class="nav-contact" href="#contact">Let’s talk <span>↗</span></a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+      <i></i><i></i><i></i>
+    </button>
+  </header>
+
+  <main id="main">
+    <!-- Hero Scroll Track (pinned viewport with scroll-controlled particle disintegration) -->
+    <div class="hero-scroll-track" id="hero-track">
+      <section class="hero hero-sticky" id="top">
+        <div class="hero-ambient-glow" aria-hidden="true"></div>
+        <p class="hero-eyebrow">COMPUTER SCIENCE <span>·</span> SOFTWARE <span>·</span> AI/ML</p>
+
+        <!-- Full-Viewport Particle Canvas (unconstrained, covers full hero width and height) -->
+        <canvas class="hero-particle-canvas" id="portrait-canvas" aria-hidden="true"></canvas>
+        <img class="hero-portrait-fallback" id="portrait-fallback" src="assets/susatwik-manuri.png" alt="Portrait of Susatwik Manuri" fetchpriority="high" />
+
+        <!-- Metallic PORTFOLIO Title -->
+        <h1 class="hero-portfolio-word" id="hero-title">PORTFOLIO</h1>
+
+        <!-- Hero Identity & Focus Areas -->
+        <div class="hero-caption" id="hero-caption">
+          <div class="hero-identity">
+            <strong class="hero-name">Susatwik Manuri</strong>
+            <span class="hero-role">Full-Stack Developer · AI/ML Enthusiast</span>
+            <span class="hero-description">Final-year Computer Science and Engineering student.</span>
+          </div>
+          <ul class="hero-specialties" aria-label="Focus areas">
+            <li>FULL-STACK DEVELOPMENT</li>
+            <li>ARTIFICIAL INTELLIGENCE</li>
+            <li>MACHINE LEARNING</li>
+          </ul>
+          <a class="hero-explore" href="#about">EXPLORE WORK <span>↓</span></a>
+        </div>
+      </section>
+    </div>
+
+    <!-- 01 — ABOUT SECTION with Editorial Portrait & Progressive Revelation -->
+    <section class="about section" id="about">
+      <canvas class="about-neural-canvas" id="about-neural-canvas" aria-hidden="true"></canvas>
+      <div class="section-head">
+        <span class="eyebrow">01 — ABOUT ME</span>
+        <span class="section-rule"></span>
+        <span class="section-aside">A DEVELOPER IN PROGRESS</span>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left Column: Susatwik Manuri Portrait Card -->
+        <div class="about-portrait-col">
+          <div class="about-portrait-card">
+            <div class="about-portrait-glow" aria-hidden="true"></div>
+            <img
+              src="assets/susatwik-portrait.png"
+              alt="Portrait of Susatwik Manuri"
+              class="about-portrait-img"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="about-portrait-badge">
+              <span class="badge-dot"></span>
+              <span>SUSATWIK MANURI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Editorial Headline & Scroll-Revealed Copy -->
+        <div class="about-copy-col">
+          <div class="about-card">
+            <h2 class="about-headline">
+              <span class="reveal-line" data-line="0">Curiosity is where</span>
+              <span class="reveal-line" data-line="1">ideas become</span>
+              <span class="reveal-line highlight" data-line="2"><em>reality.</em></span>
+            </h2>
+
+            <p class="about-lead">
+              <span class="reveal-word">I'm</span> <span class="reveal-word">Susatwik</span> <span class="reveal-word">Manuri,</span> <span class="reveal-word">a</span> <span class="reveal-word">Computer</span> <span class="reveal-word">Science</span> <span class="reveal-word">and</span> <span class="reveal-word">Engineering</span> <span class="reveal-word">student</span> <span class="reveal-word">focused</span> <span class="reveal-word">on</span> <span class="reveal-word">full-stack</span> <span class="reveal-word">development,</span> <span class="reveal-word">software</span> <span class="reveal-word">engineering,</span> <span class="reveal-word">and</span> <span class="reveal-word">AI/ML.</span> <span class="reveal-word">I</span> <span class="reveal-word">enjoy</span> <span class="reveal-word">transforming</span> <span class="reveal-word">complex</span> <span class="reveal-word">ideas</span> <span class="reveal-word">into</span> <span class="reveal-word">practical,</span> <span class="reveal-word">reliable</span> <span class="reveal-word">applications,</span> <span class="reveal-word">exploring</span> <span class="reveal-word">new</span> <span class="reveal-word">technologies,</span> <span class="reveal-word">and</span> <span class="reveal-word">building</span> <span class="reveal-word">products</span> <span class="reveal-word">that</span> <span class="reveal-word">solve</span> <span class="reveal-word">real</span> <span class="reveal-word">problems.</span>
+            </p>
+            <p class="about-body">
+              <span class="reveal-word">My</span> <span class="reveal-word">approach</span> <span class="reveal-word">combines</span> <span class="reveal-word">thoughtful</span> <span class="reveal-word">engineering,</span> <span class="reveal-word">continuous</span> <span class="reveal-word">learning,</span> <span class="reveal-word">and</span> <span class="reveal-word">attention</span> <span class="reveal-word">to</span> <span class="reveal-word">user</span> <span class="reveal-word">experience</span> <span class="reveal-word">—</span> <span class="reveal-word">from</span> <span class="reveal-word">designing</span> <span class="reveal-word">clean</span> <span class="reveal-word">interfaces</span> <span class="reveal-word">to</span> <span class="reveal-word">developing</span> <span class="reveal-word">dependable</span> <span class="reveal-word">backend</span> <span class="reveal-word">systems</span> <span class="reveal-word">and</span> <span class="reveal-word">intelligent</span> <span class="reveal-word">applications.</span>
+            </p>
+
+            <div class="about-actions">
+              <a class="arrow-link" href="#work">Explore my work <span>↘</span></a>
+              <a class="arrow-link" href="#contact">Let’s connect <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-foot">
+        <span>OPEN TO THOUGHTFUL OPPORTUNITIES</span>
+        <span>INDIA · 2026</span>
+      </div>
+    </section>
+
+    <!-- 02 — THE STACK (SKILLS): 4 Categorized Horizontal Rows with Official Logos -->
+    <section class="skills section" id="skills">
+      <div class="section-head">
+        <span class="eyebrow">02 — THE STACK</span>
+        <span class="section-rule"></span>
+        <span class="section-aside">TECHNOLOGIES &amp; DISCIPLINES</span>
+      </div>
+
+      <div class="skills-heading">
+        <h2>Technologies,<br/>frameworks<br/><em>&amp; disciplines.</em></h2>
+        <p>Current focus across full-stack development, AI and machine learning, and dependable software architecture. I work with modern tools, frameworks and cloud technologies to build scalable, performant and meaningful solutions.</p>
+      </div>
+
+      <!-- Infinite Seamless Single-Line-Per-Row Logo Carousel -->
+      <div class="marquee-container" aria-label="Technical skills stack infinite marquee">
+        
+        <!-- Row 1: Left to Right (LTR) — Languages & Core Foundations -->
+        <div class="marquee-row" data-direction="ltr" aria-label="Row 1: Languages and Foundations">
+          <div class="marquee-track track-ltr-1">
+            <div class="marquee-group">
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11.91 2c-5.09 0-4.78 2.21-4.78 2.21l.01 2.29h4.87v.69H5.13S2 6.82 2 11.93c0 5.12 2.73 4.94 2.73 4.94h1.63v-2.3s-.09-2.73 2.68-2.73h4.63s2.58.04 2.58-2.52V4.52S16.99 2 11.91 2zm-2.6 1.54a.88.88 0 1 1 0 1.76.88.88 0 0 1 0-1.76z" fill="#3776AB"/><path d="M12.09 22c5.09 0 4.78-2.21 4.78-2.21l-.01-2.29h-4.87v-.69h6.88s3.13.37 3.13-4.74c0-5.12-2.73-4.94-2.73-4.94h-1.63v2.3s.09 2.73-2.68 2.73H10.34s-2.58-.04-2.58 2.52v4.8s-.75 2.52 4.33 2.52zm2.6-1.54a.88.88 0 1 1 0-1.76.88.88 0 0 1 0 1.76z" fill="#FFD438"/></svg>
+                </span>
+                <span class="skill-name">Python</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M8.85 16.85s-1.85-.35-2.6-.4c-2.35-.15-2.75.8-2.75.8s.6.5 1.7.65c1.4.2 3.65.1 3.65-.05zm.6-2.15s-2.1-.35-3-.45c-2.65-.25-3.15.95-3.15.95s.7.55 1.95.75c1.6.25 4.2.1 4.2-.25zm6.85 4.3s.8.65-1.05 1.15c-2.25.6-5.1.75-8.85.2 0 0-1.25.7 1.05 1.15 3.1.6 8.5.65 11.2-.4 0 0 1.3-.5-2.35-2.1zm-4.65-5.95s1.85-2.15-.9-4.1c-2.2-1.55-1.15-3.05-.2-4.25-1.55.5-3.2 2-2.3 3.8.9 1.75 3.4 2.5 3.4 4.55zm2.7 3.75s1.55.3 2.65-.6c.9-.75.75-1.85-.35-2.15-.95-.25-1.5.15-1.5.15s.45-.6 1.45-.55c1.45.1 2.25 1.3 1.15 2.55-1.15 1.25-3.4.55-3.4.55zm-1.85 2.25s3.5-.15 5.55-.95c1.65-.65 2.1-1.6 1.1-2.15-.85-.45-2.05-.2-2.05-.2s.9-.6.2-1.15c-.95-.7-2.35-.35-2.35-.35s.8-.5-.2-.95c-1.35-.6-3.8.4-5.25.85 0 0 1.2-.5 3.05-.9 2.55-.5 5.15.2 5.15 1.95 0 1.6-2.1 2.55-5.2 3.7zm-2.45-6.55s2.45-1.55.2-4.55c-1.8-2.4-.4-4-1.2-5.45-.45 1.45-1.7 2.75-.85 4.35 1.15 2.15 1.85 3.5 1.85 5.65z" fill="#E76F00"/><path d="M11.75 22.8c3.95 0 7.35-.45 7.35-.45s-.95.7-4.45.9c-4.45.25-8.5-.15-8.5-.15s1.25-.15 5.6-.3z" fill="#5382A1"/></svg>
+                </span>
+                <span class="skill-name">Java</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7.2v9.6L12 22l9-5.2V7.2L12 2z" fill="#00599C"/><path d="M12 6.5c-3.04 0-5.5 2.46-5.5 5.5s2.46 5.5 5.5 5.5c2.3 0 4.28-1.42 5.08-3.43h-2.3c-.6 1.05-1.67 1.73-2.78 1.73-1.88 0-3.4-1.52-3.4-3.8s1.52-3.8 3.4-3.8c1.11 0 2.18.68 2.78 1.73h2.3C16.28 7.92 14.3 6.5 12 6.5z" fill="#FFFFFF"/></svg>
+                </span>
+                <span class="skill-name">C</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7.2v9.6L12 22l9-5.2V7.2L12 2z" fill="#00599C"/><path d="M10.5 7.2c-2.65 0-4.8 2.15-4.8 4.8s2.15 4.8 4.8 4.8c2 0 3.73-1.24 4.43-3h-2c-.52.92-1.46 1.5-2.43 1.5-1.64 0-2.97-1.33-2.97-3.3s1.33-3.3 2.97-3.3c.97 0 1.91.58 2.43 1.5h2c-.7-1.76-2.43-3-4.43-3zm5.7 3.3h-.9v1.2h.9v.9h1.2v-.9h.9v-1.2h-.9v-.9h-1.2v.9zm2.7 0h-.9v1.2h.9v.9h1.2v-.9h.9v-1.2h-.9v-.9h-1.2v.9z" fill="#FFFFFF"/></svg>
+                </span>
+                <span class="skill-name">C++</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><path d="M6.5 17.5c.7.4 1.5.7 2.4.7 1.4 0 2.2-.7 2.2-2.1v-6.6H8.7v6.6c0 .7-.3 1-1 1-.4 0-.8-.1-1.2-.3v.7zm6.7-.1c.9.5 2 .8 3.1.8 1.8 0 2.8-.9 2.8-2.2 0-1.3-.8-1.9-2.2-2.5-.9-.4-1.3-.7-1.3-1.2 0-.5.4-.9 1.2-.9.8 0 1.5.3 2 .6l.6-1.5c-.6-.4-1.5-.6-2.5-.6-1.8 0-2.8 1-2.8 2.2 0 1.2.8 1.9 2.2 2.5 1 .4 1.3.8 1.3 1.3 0 .6-.5 1-1.4 1-.9 0-1.8-.4-2.4-.8l-.6 1.3z" fill="#000000"/></svg>
+                </span>
+                <span class="skill-name">JavaScript</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#3178C6"/><path d="M4.5 10.5h6v1.8H8.5v6.2h-2v-6.2H4.5v-1.8zm7.5 7.9c.9.5 2 .8 3.1.8 1.8 0 2.8-.9 2.8-2.2 0-1.3-.8-1.9-2.2-2.5-.9-.4-1.3-.7-1.3-1.2 0-.5.4-.9 1.2-.9.8 0 1.5.3 2 .6l.6-1.5c-.6-.4-1.5-.6-2.5-.6-1.8 0-2.8 1-2.8 2.2 0 1.2.8 1.9 2.2 2.5 1 .4 1.3.8 1.3 1.3 0 .6-.5 1-1.4 1-.9 0-1.8-.4-2.4-.8l-.6 1.3z" fill="#FFFFFF"/></svg>
+                </span>
+                <span class="skill-name">TypeScript</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3c-4.97 0-9 1.34-9 3v12c0 1.66 4.03 3 9 3s9-1.34 9-3V6c0-1.66-4.03-3-9-3z" fill="#E28935" fill-opacity="0.2"/><ellipse cx="12" cy="6" rx="9" ry="3" fill="#E28935"/><path d="M21 12c0 1.66-4.03 3-9 3s-9-1.34-9-3" stroke="#E28935" stroke-width="2"/><path d="M21 18c0 1.66-4.03 3-9 3s-9-1.34-9-3" stroke="#E28935" stroke-width="2"/><path d="M3 6v12M21 6v12" stroke="#E28935" stroke-width="2"/></svg>
+                </span>
+                <span class="skill-name">SQL</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 2l1.6 18.2L12 23l7.4-2.8L21 2H3z" fill="#E34F26"/><path d="M12 3.8v17.2l5.8-2.2L19.2 3.8H12z" fill="#EF652A"/><path d="M12 8.3H7.7l.3 3.3H12v-3.3zm0 6.6l-2.4-.6-.2-1.7H7.1l.3 3.5 4.6 1.3v-2.5z" fill="#EBEBEB"/><path d="M12 8.3h4.3l-.4 4.5-.4 4.1-3.5 1v-2.5l1.9-.5.2-2.1H12V8.3z" fill="#FFFFFF"/></svg>
+                </span>
+                <span class="skill-name">HTML5</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 2l1.6 18.2L12 23l7.4-2.8L21 2H3z" fill="#1572B6"/><path d="M12 3.8v17.2l5.8-2.2L19.2 3.8H12z" fill="#33A9DC"/><path d="M12 8.3H7.7l.3 3.3H12v-3.3zm0 6.6l-2.4-.6-.2-1.7H7.1l.3 3.5 4.6 1.3v-2.5z" fill="#EBEBEB"/><path d="M12 8.3h4.3l-.4 4.5-.4 4.1-3.5 1v-2.5l1.9-.5.2-2.1H12V8.3z" fill="#FFFFFF"/></svg>
+                </span>
+                <span class="skill-name">CSS3</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21.5 3.6L12.5 22 3.5 3.6l7.5 1.4 2.8-4.2 2.2 4.2 5.5-1.4z" fill="url(#vite-grad)"/><path d="M12.9 3.5L8.5 12h3.2l-1.5 6 6-7.8h-3.3l1-6.7z" fill="#FFD438"/><defs><linearGradient id="vite-grad" x1="3.5" y1="3.6" x2="21.5" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#41D1FF"/><stop offset="1" stop-color="#BD34FE"/></linearGradient></defs></svg>
+                </span>
+                <span class="skill-name">Vite</span>
+              </div>
+            </div>
+            <!-- Duplicated group for seamless infinite looping -->
+            <div class="marquee-group" aria-hidden="true">
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11.91 2c-5.09 0-4.78 2.21-4.78 2.21l.01 2.29h4.87v.69H5.13S2 6.82 2 11.93c0 5.12 2.73 4.94 2.73 4.94h1.63v-2.3s-.09-2.73 2.68-2.73h4.63s2.58.04 2.58-2.52V4.52S16.99 2 11.91 2zm-2.6 1.54a.88.88 0 1 1 0 1.76.88.88 0 0 1 0-1.76z" fill="#3776AB"/><path d="M12.09 22c5.09 0 4.78-2.21 4.78-2.21l-.01-2.29h-4.87v-.69h6.88s3.13.37 3.13-4.74c0-5.12-2.73-4.94-2.73-4.94h-1.63v2.3s.09 2.73-2.68 2.73H10.34s-2.58-.04-2.58 2.52v4.8s-.75 2.52 4.33 2.52zm2.6-1.54a.88.88 0 1 1 0-1.76.88.88 0 0 1 0 1.76z" fill="#FFD438"/></svg>
+                </span>
+                <span class="skill-name">Python</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M8.85 16.85s-1.85-.35-2.6-.4c-2.35-.15-2.75.8-2.75.8s.6.5 1.7.65c1.4.2 3.65.1 3.65-.05zm.6-2.15s-2.1-.35-3-.45c-2.65-.25-3.15.95-3.15.95s.7.55 1.95.75c1.6.25 4.2.1 4.2-.25zm6.85 4.3s.8.65-1.05 1.15c-2.25.6-5.1.75-8.85.2 0 0-1.25.7 1.05 1.15 3.1.6 8.5.65 11.2-.4 0 0 1.3-.5-2.35-2.1zm-4.65-5.95s1.85-2.15-.9-4.1c-2.2-1.55-1.15-3.05-.2-4.25-1.55.5-3.2 2-2.3 3.8.9 1.75 3.4 2.5 3.4 4.55zm2.7 3.75s1.55.3 2.65-.6c.9-.75.75-1.85-.35-2.15-.95-.25-1.5.15-1.5.15s.45-.6 1.45-.55c1.45.1 2.25 1.3 1.15 2.55-1.15 1.25-3.4.55-3.4.55zm-1.85 2.25s3.5-.15 5.55-.95c1.65-.65 2.1-1.6 1.1-2.15-.85-.45-2.05-.2-2.05-.2s.9-.6.2-1.15c-.95-.7-2.35-.35-2.35-.35s.8-.5-.2-.95c-1.35-.6-3.8.4-5.25.85 0 0 1.2-.5 3.05-.9 2.55-.5 5.15.2 5.15 1.95 0 1.6-2.1 2.55-5.2 3.7zm-2.45-6.55s2.45-1.55.2-4.55c-1.8-2.4-.4-4-1.2-5.45-.45 1.45-1.7 2.75-.85 4.35 1.15 2.15 1.85 3.5 1.85 5.65z" fill="#E76F00"/><path d="M11.75 22.8c3.95 0 7.35-.45 7.35-.45s-.95.7-4.45.9c-4.45.25-8.5-.15-8.5-.15s1.25-.15 5.6-.3z" fill="#5382A1"/></svg>
+                </span>
+                <span class="skill-name">Java</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7.2v9.6L12 22l9-5.2V7.2L12 2z" fill="#00599C"/><path d="M12 6.5c-3.04 0-5.5 2.46-5.5 5.5s2.46 5.5 5.5 5.5c2.3 0 4.28-1.42 5.08-3.43h-2.3c-.6 1.05-1.67 1.73-2.78 1.73-1.88 0-3.4-1.52-3.4-3.8s1.52-3.8 3.4-3.8c1.11 0 2.18.68 2.78 1.73h2.3C16.28 7.92 14.3 6.5 12 6.5z" fill="#FFFFFF"/></svg>
+                </span>
+                <span class="skill-name">C</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7.2v9.6L12 22l9-5.2V7.2L12 2z" fill="#00599C"/><path d="M10.5 7.2c-2.65 0-4.8 2.15-4.8 4.8s2.15 4.8 4.8 4.8c2 0 3.73-1.24 4.43-3h-2c-.52.92-1.46 1.5-2.43 1.5-1.64 0-2.97-1.33-2.97-3.3s1.33-3.3 2.97-3.3c.97 0 1.91.58 2.43 1.5h2c-.7-1.76-2.43-3-4.43-3zm5.7 3.3h-.9v1.2h.9v.9h1.2v-.9h.9v-1.2h-.9v-.9h-1.2v.9zm2.7 0h-.9v1.2h.9v.9h1.2v-.9h.9v-1.2h-.9v-.9h-1.2v.9z" fill="#FFFFFF"/></svg>
+                </span>
+                <span class="skill-name">C++</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><path d="M6.5 17.5c.7.4 1.5.7 2.4.7 1.4 0 2.2-.7 2.2-2.1v-6.6H8.7v6.6c0 .7-.3 1-1 1-.4 0-.8-.1-1.2-.3v.7zm6.7-.1c.9.5 2 .8 3.1.8 1.8 0 2.8-.9 2.8-2.2 0-1.3-.8-1.9-2.2-2.5-.9-.4-1.3-.7-1.3-1.2 0-.5.4-.9 1.2-.9.8 0 1.5.3 2 .6l.6-1.5c-.6-.4-1.5-.6-2.5-.6-1.8 0-2.8 1-2.8 2.2 0 1.2.8 1.9 2.2 2.5 1 .4 1.3.8 1.3 1.3 0 .6-.5 1-1.4 1-.9 0-1.8-.4-2.4-.8l-.6 1.3z" fill="#000000"/></svg>
+                </span>
+                <span class="skill-name">JavaScript</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#3178C6"/><path d="M4.5 10.5h6v1.8H8.5v6.2h-2v-6.2H4.5v-1.8zm7.5 7.9c.9.5 2 .8 3.1.8 1.8 0 2.8-.9 2.8-2.2 0-1.3-.8-1.9-2.2-2.5-.9-.4-1.3-.7-1.3-1.2 0-.5.4-.9 1.2-.9.8 0 1.5.3 2 .6l.6-1.5c-.6-.4-1.5-.6-2.5-.6-1.8 0-2.8 1-2.8 2.2 0 1.2.8 1.9 2.2 2.5 1 .4 1.3.8 1.3 1.3 0 .6-.5 1-1.4 1-.9 0-1.8-.4-2.4-.8l-.6 1.3z" fill="#FFFFFF"/></svg>
+                </span>
+                <span class="skill-name">TypeScript</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3c-4.97 0-9 1.34-9 3v12c0 1.66 4.03 3 9 3s9-1.34 9-3V6c0-1.66-4.03-3-9-3z" fill="#E28935" fill-opacity="0.2"/><ellipse cx="12" cy="6" rx="9" ry="3" fill="#E28935"/><path d="M21 12c0 1.66-4.03 3-9 3s-9-1.34-9-3" stroke="#E28935" stroke-width="2"/><path d="M21 18c0 1.66-4.03 3-9 3s-9-1.34-9-3" stroke="#E28935" stroke-width="2"/><path d="M3 6v12M21 6v12" stroke="#E28935" stroke-width="2"/></svg>
+                </span>
+                <span class="skill-name">SQL</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 2l1.6 18.2L12 23l7.4-2.8L21 2H3z" fill="#E34F26"/><path d="M12 3.8v17.2l5.8-2.2L19.2 3.8H12z" fill="#EF652A"/><path d="M12 8.3H7.7l.3 3.3H12v-3.3zm0 6.6l-2.4-.6-.2-1.7H7.1l.3 3.5 4.6 1.3v-2.5z" fill="#EBEBEB"/><path d="M12 8.3h4.3l-.4 4.5-.4 4.1-3.5 1v-2.5l1.9-.5.2-2.1H12V8.3z" fill="#FFFFFF"/></svg>
+                </span>
+                <span class="skill-name">HTML5</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 2l1.6 18.2L12 23l7.4-2.8L21 2H3z" fill="#1572B6"/><path d="M12 3.8v17.2l5.8-2.2L19.2 3.8H12z" fill="#33A9DC"/><path d="M12 8.3H7.7l.3 3.3H12v-3.3zm0 6.6l-2.4-.6-.2-1.7H7.1l.3 3.5 4.6 1.3v-2.5z" fill="#EBEBEB"/><path d="M12 8.3h4.3l-.4 4.5-.4 4.1-3.5 1v-2.5l1.9-.5.2-2.1H12V8.3z" fill="#FFFFFF"/></svg>
+                </span>
+                <span class="skill-name">CSS3</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21.5 3.6L12.5 22 3.5 3.6l7.5 1.4 2.8-4.2 2.2 4.2 5.5-1.4z" fill="url(#vite-grad)"/><path d="M12.9 3.5L8.5 12h3.2l-1.5 6 6-7.8h-3.3l1-6.7z" fill="#FFD438"/></svg>
+                </span>
+                <span class="skill-name">Vite</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Right to Left (RTL) — Frontend & UI Architecture -->
+        <div class="marquee-row" data-direction="rtl" aria-label="Row 2: Frontend and UI Architecture">
+          <div class="marquee-track track-rtl-1">
+            <div class="marquee-group">
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="10" ry="3.8" stroke="#61DAFB" stroke-width="1.4"/><ellipse cx="12" cy="12" rx="10" ry="3.8" stroke="#61DAFB" stroke-width="1.4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="3.8" stroke="#61DAFB" stroke-width="1.4" transform="rotate(120 12 12)"/></svg>
+                </span>
+                <span class="skill-name">React</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#000000" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/><path d="M15.5 8.5v7m-7-7v7l7.5-7" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="skill-name">Next.js</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 6c-3.6 0-5.8 1.8-6.6 5.4 1.4-1.8 3.1-2.5 5.1-2 1.15.28 2 1.15 2.9 2.1 1.5 1.55 3.3 3.4 7.1 3.4 3.6 0 5.8-1.8 6.6-5.4-1.4 1.8-3.1 2.5-5.1 2-1.15-.28-2-1.15-2.9-2.1C17.6 7.85 15.8 6 12 6zM5.4 13.5C1.8 13.5-.4 15.3-1.2 18.9c1.4-1.8 3.1-2.5 5.1-2 1.15.28 2 1.15 2.9 2.1 1.5 1.55 3.3 3.4 7.1 3.4 3.6 0 5.8-1.8 6.6-5.4-1.4 1.8-3.1 2.5-5.1 2-1.15-.28-2-1.15-2.9-2.1-1.5-1.55-3.3-3.4-7.1-3.4z" transform="scale(0.85) translate(2, 0)" fill="#06B6D4"/></svg>
+                </span>
+                <span class="skill-name">Tailwind CSS</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 2h16v7.33H12L4 2zm0 7.33h8l8 7.34H4V9.33zm8 7.34h8L12 24v-7.33z" fill="#0055FF"/></svg>
+                </span>
+                <span class="skill-name">Framer Motion</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M8 24c2.2 0 4-1.8 4-4v-4H8c-2.2 0-4 1.8-4 4s1.8 4 4 4z" fill="#0ACF83"/><path d="M4 12c0-2.2 1.8-4 4-4h4v8H8c-2.2 0-4-1.8-4-4z" fill="#A259FF"/><path d="M4 4c0-2.2 1.8-4 4-4h4v8H8C5.8 8 4 6.2 4 4z" fill="#F24E1E"/><path d="M12 0h4c2.2 0 4 1.8 4 4s-1.8 4-4 4h-4V0z" fill="#FF7262"/><circle cx="16" cy="12" r="4" fill="#1ABCFE"/></svg>
+                </span>
+                <span class="skill-name">Figma</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4F8CFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><rect x="15" y="10" width="7" height="9" rx="1" fill="#0B0F17" stroke="#5CE1E6" stroke-width="1.5"/></svg>
+                </span>
+                <span class="skill-name">Responsive Design</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l8.66 5v10L12 22l-8.66-5V7L12 2z" stroke="#E10098" stroke-width="1.5"/><circle cx="12" cy="2" r="2" fill="#E10098"/><circle cx="20.66" cy="7" r="2" fill="#E10098"/><circle cx="20.66" cy="17" r="2" fill="#E10098"/><circle cx="12" cy="22" r="2" fill="#E10098"/><circle cx="3.34" cy="17" r="2" fill="#E10098"/><circle cx="3.34" cy="7" r="2" fill="#E10098"/><path d="M12 4.5l6.5 11.25h-13L12 4.5z" stroke="#E10098" stroke-width="1.5"/></svg>
+                </span>
+                <span class="skill-name">GraphQL</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+                </span>
+                <span class="skill-name">WebSockets</span>
+              </div>
+            </div>
+            <!-- Duplicated group for seamless infinite looping -->
+            <div class="marquee-group" aria-hidden="true">
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="10" ry="3.8" stroke="#61DAFB" stroke-width="1.4"/><ellipse cx="12" cy="12" rx="10" ry="3.8" stroke="#61DAFB" stroke-width="1.4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="3.8" stroke="#61DAFB" stroke-width="1.4" transform="rotate(120 12 12)"/></svg>
+                </span>
+                <span class="skill-name">React</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#000000" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/><path d="M15.5 8.5v7m-7-7v7l7.5-7" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="skill-name">Next.js</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 6c-3.6 0-5.8 1.8-6.6 5.4 1.4-1.8 3.1-2.5 5.1-2 1.15.28 2 1.15 2.9 2.1 1.5 1.55 3.3 3.4 7.1 3.4 3.6 0 5.8-1.8 6.6-5.4-1.4 1.8-3.1 2.5-5.1 2-1.15-.28-2-1.15-2.9-2.1C17.6 7.85 15.8 6 12 6zM5.4 13.5C1.8 13.5-.4 15.3-1.2 18.9c1.4-1.8 3.1-2.5 5.1-2 1.15.28 2 1.15 2.9 2.1 1.5 1.55 3.3 3.4 7.1 3.4 3.6 0 5.8-1.8 6.6-5.4-1.4 1.8-3.1 2.5-5.1 2-1.15-.28-2-1.15-2.9-2.1-1.5-1.55-3.3-3.4-7.1-3.4z" transform="scale(0.85) translate(2, 0)" fill="#06B6D4"/></svg>
+                </span>
+                <span class="skill-name">Tailwind CSS</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 2h16v7.33H12L4 2zm0 7.33h8l8 7.34H4V9.33zm8 7.34h8L12 24v-7.33z" fill="#0055FF"/></svg>
+                </span>
+                <span class="skill-name">Framer Motion</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M8 24c2.2 0 4-1.8 4-4v-4H8c-2.2 0-4 1.8-4 4s1.8 4 4 4z" fill="#0ACF83"/><path d="M4 12c0-2.2 1.8-4 4-4h4v8H8c-2.2 0-4-1.8-4-4z" fill="#A259FF"/><path d="M4 4c0-2.2 1.8-4 4-4h4v8H8C5.8 8 4 6.2 4 4z" fill="#F24E1E"/><path d="M12 0h4c2.2 0 4 1.8 4 4s-1.8 4-4 4h-4V0z" fill="#FF7262"/><circle cx="16" cy="12" r="4" fill="#1ABCFE"/></svg>
+                </span>
+                <span class="skill-name">Figma</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4F8CFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><rect x="15" y="10" width="7" height="9" rx="1" fill="#0B0F17" stroke="#5CE1E6" stroke-width="1.5"/></svg>
+                </span>
+                <span class="skill-name">Responsive Design</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l8.66 5v10L12 22l-8.66-5V7L12 2z" stroke="#E10098" stroke-width="1.5"/><circle cx="12" cy="2" r="2" fill="#E10098"/><circle cx="20.66" cy="7" r="2" fill="#E10098"/><circle cx="20.66" cy="17" r="2" fill="#E10098"/><circle cx="12" cy="22" r="2" fill="#E10098"/><circle cx="3.34" cy="17" r="2" fill="#E10098"/><circle cx="3.34" cy="7" r="2" fill="#E10098"/><path d="M12 4.5l6.5 11.25h-13L12 4.5z" stroke="#E10098" stroke-width="1.5"/></svg>
+                </span>
+                <span class="skill-name">GraphQL</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+                </span>
+                <span class="skill-name">WebSockets</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Left to Right (LTR) — Backend, APIs & Databases -->
+        <div class="marquee-row" data-direction="ltr" aria-label="Row 3: Backend, APIs and Databases">
+          <div class="marquee-track track-ltr-2">
+            <div class="marquee-group">
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l9 5.2v10.4L12 22.8 3 17.6V7.2L12 2z" fill="#5FA04E"/><path d="M12 4.5l-6.8 3.9v7.8L12 20.1l6.8-3.9V8.4L12 4.5z" fill="#0B0F17"/><path d="M11 8h2v8h-2z" fill="#5FA04E"/><circle cx="12" cy="7.2" r="1" fill="#5FA04E"/></svg>
+                </span>
+                <span class="skill-name">Node.js</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E2838" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/><text x="12" y="15.5" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-weight="700" font-size="9" fill="#FFFFFF" text-anchor="middle">ex</text></svg>
+                </span>
+                <span class="skill-name">Express.js</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#059669"/><path d="M13 3L6 13h5l-2 8 8-11h-5l1-7z" fill="#FFFFFF"/></svg>
+                </span>
+                <span class="skill-name">FastAPI</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4F8CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                </span>
+                <span class="skill-name">REST APIs</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2.5C7.5 2.5 4 5.8 4 10.2c0 3.2 1.8 6 4.6 7.4-.2.9-.6 2.1-1.6 3.1 1.7 0 3.4-.8 4.4-2.1.9.3 1.9.4 2.9.4 4.5 0 8-3.3 8-7.7 0-4.4-3.5-8.8-10.3-8.8z" fill="#336791"/><path d="M13.5 8c-1.5 0-2.5 1-2.5 2.5 0 2 1.5 3.5 3.5 3.5s2.5-1 2.5-2.5c0-2-1.5-3.5-3.5-3.5z" fill="#FFFFFF"/></svg>
+                </span>
+                <span class="skill-name">PostgreSQL</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 1.5s-6 5.8-6 11.5c0 4.2 3.1 7.8 6 9.5 2.9-1.7 6-5.3 6-9.5 0-5.7-6-11.5-6-11.5z" fill="#47A248"/><path d="M12 2v19.8c-.3-.2-.7-.4-1-.7-2.4-1.6-4.5-4.6-4.5-8.1 0-4.5 4.5-9.3 5.5-11z" fill="#499D4A"/></svg>
+                </span>
+                <span class="skill-name">MongoDB</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 4.5v9L12 21l-9-4.5v-9L12 3z" fill="#DC382D"/><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" fill="#FF4438"/><path d="M12 12l9-4.5v9L12 21V12z" fill="#B32B22"/></svg>
+                </span>
+                <span class="skill-name">Redis</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M13.5 2.5L3 14.5h8.5l-2 7 11.5-12h-8.5l2-7z" fill="#3ECF8E"/></svg>
+                </span>
+                <span class="skill-name">Supabase</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.5 17.5L7.8 3.2c.1-.5.7-.7 1-.3l3.2 5.5-7.5 9.1z" fill="#FFA000"/><path d="M4.5 17.5l8.5-15c.3-.5 1-.4 1.2.2L19.5 17.5 4.5 17.5z" fill="#F57C00"/><path d="M19.5 17.5L14 3.7c-.2-.5-.9-.6-1.1-.1L3.2 18.2c-.3.4 0 1 .5 1.1l7.8 2.2c.3.1.7.1 1 0l7.8-2.2c.5-.1.8-.7.5-1.1l-1.3-.7z" fill="#FFCA28"/></svg>
+                </span>
+                <span class="skill-name">Firebase</span>
+              </div>
+            </div>
+            <!-- Duplicated group for seamless infinite looping -->
+            <div class="marquee-group" aria-hidden="true">
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l9 5.2v10.4L12 22.8 3 17.6V7.2L12 2z" fill="#5FA04E"/><path d="M12 4.5l-6.8 3.9v7.8L12 20.1l6.8-3.9V8.4L12 4.5z" fill="#0B0F17"/><path d="M11 8h2v8h-2z" fill="#5FA04E"/><circle cx="12" cy="7.2" r="1" fill="#5FA04E"/></svg>
+                </span>
+                <span class="skill-name">Node.js</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E2838" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/><text x="12" y="15.5" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-weight="700" font-size="9" fill="#FFFFFF" text-anchor="middle">ex</text></svg>
+                </span>
+                <span class="skill-name">Express.js</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#059669"/><path d="M13 3L6 13h5l-2 8 8-11h-5l1-7z" fill="#FFFFFF"/></svg>
+                </span>
+                <span class="skill-name">FastAPI</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4F8CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                </span>
+                <span class="skill-name">REST APIs</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2.5C7.5 2.5 4 5.8 4 10.2c0 3.2 1.8 6 4.6 7.4-.2.9-.6 2.1-1.6 3.1 1.7 0 3.4-.8 4.4-2.1.9.3 1.9.4 2.9.4 4.5 0 8-3.3 8-7.7 0-4.4-3.5-8.8-10.3-8.8z" fill="#336791"/><path d="M13.5 8c-1.5 0-2.5 1-2.5 2.5 0 2 1.5 3.5 3.5 3.5s2.5-1 2.5-2.5c0-2-1.5-3.5-3.5-3.5z" fill="#FFFFFF"/></svg>
+                </span>
+                <span class="skill-name">PostgreSQL</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 1.5s-6 5.8-6 11.5c0 4.2 3.1 7.8 6 9.5 2.9-1.7 6-5.3 6-9.5 0-5.7-6-11.5-6-11.5z" fill="#47A248"/><path d="M12 2v19.8c-.3-.2-.7-.4-1-.7-2.4-1.6-4.5-4.6-4.5-8.1 0-4.5 4.5-9.3 5.5-11z" fill="#499D4A"/></svg>
+                </span>
+                <span class="skill-name">MongoDB</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 4.5v9L12 21l-9-4.5v-9L12 3z" fill="#DC382D"/><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" fill="#FF4438"/><path d="M12 12l9-4.5v9L12 21V12z" fill="#B32B22"/></svg>
+                </span>
+                <span class="skill-name">Redis</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M13.5 2.5L3 14.5h8.5l-2 7 11.5-12h-8.5l2-7z" fill="#3ECF8E"/></svg>
+                </span>
+                <span class="skill-name">Supabase</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.5 17.5L7.8 3.2c.1-.5.7-.7 1-.3l3.2 5.5-7.5 9.1z" fill="#FFA000"/><path d="M4.5 17.5l8.5-15c.3-.5 1-.4 1.2.2L19.5 17.5 4.5 17.5z" fill="#F57C00"/><path d="M19.5 17.5L14 3.7c-.2-.5-.9-.6-1.1-.1L3.2 18.2c-.3.4 0 1 .5 1.1l7.8 2.2c.3.1.7.1 1 0l7.8-2.2c.5-.1.8-.7.5-1.1l-1.3-.7z" fill="#FFCA28"/></svg>
+                </span>
+                <span class="skill-name">Firebase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 4: Right to Left (RTL) — AI / ML, Agent Frameworks & Cloud DevOps -->
+        <div class="marquee-row" data-direction="rtl" aria-label="Row 4: AI/ML, Agent Frameworks and Cloud DevOps">
+          <div class="marquee-track track-rtl-2">
+            <div class="marquee-group">
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4.5 4.5 0 0 0-4.4 3.5A4.5 4.5 0 0 0 4 9.5a4.5 4.5 0 0 0 .5 4.5 4.5 4.5 0 0 0 3.1 3.9 4.5 4.5 0 0 0 4.4 3.5 4.5 4.5 0 0 0 3.6-1.9 4.5 4.5 0 0 0 3.9-3.1 4.5 4.5 0 0 0 .5-4.4A4.5 4.5 0 0 0 16.4 5.5 4.5 4.5 0 0 0 12 2z"/><path d="M12 8v8M8 12h8"/></svg>
+                </span>
+                <span class="skill-name">OpenAI</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 17l-3-3a4 4 0 0 1 5.6-5.6l1.4 1.4" stroke="#22D3EE" stroke-width="2.2" stroke-linecap="round"/><path d="M15 7l3 3a4 4 0 0 1-5.6 5.6l-1.4-1.4" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/><circle cx="7" cy="11" r="1.5" fill="#22D3EE"/><circle cx="17" cy="13" r="1.5" fill="#F59E0B"/></svg>
+                </span>
+                <span class="skill-name">LangChain</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="12" r="3" fill="#6366F1"/><circle cx="19" cy="6" r="3" fill="#A855F7"/><circle cx="19" cy="18" r="3" fill="#EC4899"/><path d="M8 12h8M7.5 10.5l9-3M7.5 13.5l9 3" stroke="#FFFFFF" stroke-width="1.8"/></svg>
+                </span>
+                <span class="skill-name">LangGraph</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6-8.5 8.5a2 2 0 0 1-1.4.6H4v-2.4c0-.5.2-1 .6-1.4l8.5-8.5 1.6 1.6z" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 4l4 4-2 2-4-4 2-2z" fill="#38BDF8"/></svg>
+                </span>
+                <span class="skill-name">LangSmith</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#FFD21E"/><circle cx="8.5" cy="10.5" r="1.5" fill="#000000"/><circle cx="15.5" cy="10.5" r="1.5" fill="#000000"/><path d="M8 14.5c1.2 1.8 2.5 2.5 4 2.5s2.8-.7 4-2.5" stroke="#000000" stroke-width="1.6" stroke-linecap="round"/><path d="M4 14c1 2 2.5 3 4 2.5M20 14c-1 2-2.5 3-4 2.5" stroke="#FF9D00" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </span>
+                <span class="skill-name">Hugging Face</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4.5 4.5 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V11a2 2 0 0 1-2 2h-1v2.5a2.5 2.5 0 0 1-5 0V15H5a2 2 0 0 1-2-2V9.5C1.8 8.8 1 7.5 1 6a4 4 0 0 1 8 0c0 .8-.2 1.5-.6 2.1l1.6 1.4h2V6a4 4 0 0 1 4-4z"/><circle cx="12" cy="6" r="1.5" fill="#A855F7"/><circle cx="5" cy="6" r="1.5" fill="#A855F7"/></svg>
+                </span>
+                <span class="skill-name">Machine Learning</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" fill="#EC4899"/><circle cx="4" cy="12" r="2" fill="#8B5CF6"/><circle cx="20" cy="12" r="2" fill="#8B5CF6"/><circle cx="8" cy="5" r="2" fill="#3B82F6"/><circle cx="16" cy="5" r="2" fill="#3B82F6"/><circle cx="8" cy="19" r="2" fill="#10B981"/><circle cx="16" cy="19" r="2" fill="#10B981"/><path d="M4 12l4-7m-4 7l4 7m4-7h8m-8 0l4-7m-4 7l4 7m4-7l-4-7m4 7l-4 7" stroke="#94A3B8" stroke-width="1" stroke-opacity="0.6"/></svg>
+                </span>
+                <span class="skill-name">Deep Learning</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" stroke="#38BDF8" stroke-width="1.6"/><path d="M12 6v6l4 2" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="9" r="1.5" fill="#EC4899"/><circle cx="16" cy="9" r="1.5" fill="#EC4899"/><circle cx="12" cy="17" r="1.5" fill="#6366F1"/></svg>
+                </span>
+                <span class="skill-name">LLMs &amp; RAG</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21.6 10.9L13.1 2.4a2.2 2.2 0 0 0-3.1 0L7.7 4.7l3.9 3.9a2.6 2.6 0 0 1 3.3 3.3l3.8 3.8a2.5 2.5 0 1 1-1.6 1.6l-3.5-3.5v4.5a2.5 2.5 0 1 1-2.2 0V9.8a2.6 2.6 0 0 1-1.4-2.3c0-.6.2-1.2.6-1.6L6.8 4 2.4 8.4a2.2 2.2 0 0 0 0 3.1l8.5 8.5a2.2 2.2 0 0 0 3.1 0l7.6-7.6a2.2 2.2 0 0 0 0-3.1z" fill="#F05032"/></svg>
+                </span>
+                <span class="skill-name">Git &amp; GitHub</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M13 11V9h2v2h-2zm-3 0V9h2v2h-2zm-3 0V9h2v2H7zm3-3V6h2v2h-2zm3 0V6h2v2h-2zm3 3V9h2v2h-2zm3 0V9h2v2h-2z" fill="#2496ED"/><path d="M22.5 11.5c-.5-.4-1.6-.4-2.3 0-.3-.8-.9-1.4-1.7-1.7l-.5-.2-.3.5c-.4.8-.4 1.8 0 2.6-.7.4-1.9.4-2.7 0H2c.5 4.5 4.1 8.3 9.5 8.3 6.5 0 10.9-4 11.8-8.5.2-.4.1-.7-.8-1z" fill="#2496ED"/></svg>
+                </span>
+                <span class="skill-name">Docker</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l8.7 5v10L12 22l-8.7-5V7L12 2z" fill="#326CE5"/><circle cx="12" cy="12" r="3.5" fill="#FFFFFF"/><path d="M12 4v4.5M12 15.5V20M4.5 8l3.8 2.2M15.7 13.8l3.8 2.2M4.5 16l3.8-2.2M15.7 10.2l3.8-2.2" stroke="#FFFFFF" stroke-width="1.6"/></svg>
+                </span>
+                <span class="skill-name">Kubernetes</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 7c-2.8 0-4.8 2-6 5-1.2-3-3.2-5-6-5a5 5 0 1 0 0 10c2.8 0 4.8-2 6-5 1.2 3 3.2 5 6 5a5 5 0 1 0 0-10zm-12 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm12 0a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="#00D2D3"/></svg>
+                </span>
+                <span class="skill-name">CI/CD</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6.2 11.8c-.8 0-1.4.3-1.8.8-.4.5-.5 1.2-.5 2 0 .9.2 1.6.6 2.1.4.5 1 .8 1.8.8.6 0 1.1-.2 1.6-.5.5-.4.8-.8 1-1.4v1.7h1.9v-6.9h-1.9v1.2c-.2-.5-.6-.9-1-1.2-.5-.4-1.1-.6-1.7-.6zm.8 4.3c-.4 0-.8-.1-1-.4-.2-.3-.3-.7-.3-1.3 0-.6.1-1 .3-1.3.2-.3.6-.4 1-.4.4 0 .7.1 1 .4.2.3.3.7.3 1.3 0 .6-.1 1-.3 1.3-.3.3-.6.4-1 .4zm6.6-4.3l-1.4 5.4-1.3-5.4h-1.9l2.3 7.3h1.8l1.4-4.8 1.4 4.8h1.8l2.3-7.3h-1.9l-1.3 5.4-1.4-5.4h-1.8z" fill="#FF9900"/><path d="M3.5 18.5c5.3 3.5 12 3.5 17 0-.4-.4-.9-.8-1.4-1.1-4.2 2.8-9.8 2.8-14.2 0-.5.4-.9.8-1.4 1.1z" fill="#FF9900"/></svg>
+                </span>
+                <span class="skill-name">AWS</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C9.5 2 8 4 8 7c0 1.5.3 3 .8 4.5C7.5 12.5 6 15 6 18c0 2 2 3.5 5 3.5h2c3 0 5-1.5 5-3.5 0-3-1.5-5.5-2.8-6.5.5-1.5.8-3 .8-4.5 0-3-1.5-5-4-5z" fill="#FFFFFF"/><path d="M12 2c-2.5 0-4 2-4 5 0 1.5.3 3 .8 4.5 1.5-.5 3-.5 4.4 0 .5-1.5.8-3 .8-4.5 0-3-1.5-5-4-5z" fill="#000000"/><circle cx="10" cy="6.5" r="1" fill="#FFFFFF"/><circle cx="14" cy="6.5" r="1" fill="#FFFFFF"/><circle cx="10" cy="6.5" r="0.5" fill="#000000"/><circle cx="14" cy="6.5" r="0.5" fill="#000000"/><path d="M12 8c-1 0-1.8.4-1.8 1s.8 1 1.8 1 1.8-.4 1.8-1-.8-1-1.8-1z" fill="#FFA500"/><path d="M6 18.5c-1 1-1 2.5 1 2.5h2c-1-.5-1.5-1.5-1-2.5H6zm12 0c1 1 1 2.5-1 2.5h-2c1-.5 1.5-1.5 1-2.5h2z" fill="#FFA500"/></svg>
+                </span>
+                <span class="skill-name">Linux</span>
+              </div>
+            </div>
+            <!-- Duplicated group for seamless infinite looping -->
+            <div class="marquee-group" aria-hidden="true">
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4.5 4.5 0 0 0-4.4 3.5A4.5 4.5 0 0 0 4 9.5a4.5 4.5 0 0 0 .5 4.5 4.5 4.5 0 0 0 3.1 3.9 4.5 4.5 0 0 0 4.4 3.5 4.5 4.5 0 0 0 3.6-1.9 4.5 4.5 0 0 0 3.9-3.1 4.5 4.5 0 0 0 .5-4.4A4.5 4.5 0 0 0 16.4 5.5 4.5 4.5 0 0 0 12 2z"/><path d="M12 8v8M8 12h8"/></svg>
+                </span>
+                <span class="skill-name">OpenAI</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 17l-3-3a4 4 0 0 1 5.6-5.6l1.4 1.4" stroke="#22D3EE" stroke-width="2.2" stroke-linecap="round"/><path d="M15 7l3 3a4 4 0 0 1-5.6 5.6l-1.4-1.4" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/><circle cx="7" cy="11" r="1.5" fill="#22D3EE"/><circle cx="17" cy="13" r="1.5" fill="#F59E0B"/></svg>
+                </span>
+                <span class="skill-name">LangChain</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="12" r="3" fill="#6366F1"/><circle cx="19" cy="6" r="3" fill="#A855F7"/><circle cx="19" cy="18" r="3" fill="#EC4899"/><path d="M8 12h8M7.5 10.5l9-3M7.5 13.5l9 3" stroke="#FFFFFF" stroke-width="1.8"/></svg>
+                </span>
+                <span class="skill-name">LangGraph</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6-8.5 8.5a2 2 0 0 1-1.4.6H4v-2.4c0-.5.2-1 .6-1.4l8.5-8.5 1.6 1.6z" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 4l4 4-2 2-4-4 2-2z" fill="#38BDF8"/></svg>
+                </span>
+                <span class="skill-name">LangSmith</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#FFD21E"/><circle cx="8.5" cy="10.5" r="1.5" fill="#000000"/><circle cx="15.5" cy="10.5" r="1.5" fill="#000000"/><path d="M8 14.5c1.2 1.8 2.5 2.5 4 2.5s2.8-.7 4-2.5" stroke="#000000" stroke-width="1.6" stroke-linecap="round"/><path d="M4 14c1 2 2.5 3 4 2.5M20 14c-1 2-2.5 3-4 2.5" stroke="#FF9D00" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </span>
+                <span class="skill-name">Hugging Face</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4.5 4.5 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V11a2 2 0 0 1-2 2h-1v2.5a2.5 2.5 0 0 1-5 0V15H5a2 2 0 0 1-2-2V9.5C1.8 8.8 1 7.5 1 6a4 4 0 0 1 8 0c0 .8-.2 1.5-.6 2.1l1.6 1.4h2V6a4 4 0 0 1 4-4z"/><circle cx="12" cy="6" r="1.5" fill="#A855F7"/><circle cx="5" cy="6" r="1.5" fill="#A855F7"/></svg>
+                </span>
+                <span class="skill-name">Machine Learning</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" fill="#EC4899"/><circle cx="4" cy="12" r="2" fill="#8B5CF6"/><circle cx="20" cy="12" r="2" fill="#8B5CF6"/><circle cx="8" cy="5" r="2" fill="#3B82F6"/><circle cx="16" cy="5" r="2" fill="#3B82F6"/><circle cx="8" cy="19" r="2" fill="#10B981"/><circle cx="16" cy="19" r="2" fill="#10B981"/><path d="M4 12l4-7m-4 7l4 7m4-7h8m-8 0l4-7m-4 7l4 7m4-7l-4-7m4 7l-4 7" stroke="#94A3B8" stroke-width="1" stroke-opacity="0.6"/></svg>
+                </span>
+                <span class="skill-name">Deep Learning</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" stroke="#38BDF8" stroke-width="1.6"/><path d="M12 6v6l4 2" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="9" r="1.5" fill="#EC4899"/><circle cx="16" cy="9" r="1.5" fill="#EC4899"/><circle cx="12" cy="17" r="1.5" fill="#6366F1"/></svg>
+                </span>
+                <span class="skill-name">LLMs &amp; RAG</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21.6 10.9L13.1 2.4a2.2 2.2 0 0 0-3.1 0L7.7 4.7l3.9 3.9a2.6 2.6 0 0 1 3.3 3.3l3.8 3.8a2.5 2.5 0 1 1-1.6 1.6l-3.5-3.5v4.5a2.5 2.5 0 1 1-2.2 0V9.8a2.6 2.6 0 0 1-1.4-2.3c0-.6.2-1.2.6-1.6L6.8 4 2.4 8.4a2.2 2.2 0 0 0 0 3.1l8.5 8.5a2.2 2.2 0 0 0 3.1 0l7.6-7.6a2.2 2.2 0 0 0 0-3.1z" fill="#F05032"/></svg>
+                </span>
+                <span class="skill-name">Git &amp; GitHub</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M13 11V9h2v2h-2zm-3 0V9h2v2h-2zm-3 0V9h2v2H7zm3-3V6h2v2h-2zm3 0V6h2v2h-2zm3 3V9h2v2h-2zm3 0V9h2v2h-2z" fill="#2496ED"/><path d="M22.5 11.5c-.5-.4-1.6-.4-2.3 0-.3-.8-.9-1.4-1.7-1.7l-.5-.2-.3.5c-.4.8-.4 1.8 0 2.6-.7.4-1.9.4-2.7 0H2c.5 4.5 4.1 8.3 9.5 8.3 6.5 0 10.9-4 11.8-8.5.2-.4.1-.7-.8-1z" fill="#2496ED"/></svg>
+                </span>
+                <span class="skill-name">Docker</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l8.7 5v10L12 22l-8.7-5V7L12 2z" fill="#326CE5"/><circle cx="12" cy="12" r="3.5" fill="#FFFFFF"/><path d="M12 4v4.5M12 15.5V20M4.5 8l3.8 2.2M15.7 13.8l3.8 2.2M4.5 16l3.8-2.2M15.7 10.2l3.8-2.2" stroke="#FFFFFF" stroke-width="1.6"/></svg>
+                </span>
+                <span class="skill-name">Kubernetes</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 7c-2.8 0-4.8 2-6 5-1.2-3-3.2-5-6-5a5 5 0 1 0 0 10c2.8 0 4.8-2 6-5 1.2 3 3.2 5 6 5a5 5 0 1 0 0-10zm-12 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm12 0a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="#00D2D3"/></svg>
+                </span>
+                <span class="skill-name">CI/CD</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6.2 11.8c-.8 0-1.4.3-1.8.8-.4.5-.5 1.2-.5 2 0 .9.2 1.6.6 2.1.4.5 1 .8 1.8.8.6 0 1.1-.2 1.6-.5.5-.4.8-.8 1-1.4v1.7h1.9v-6.9h-1.9v1.2c-.2-.5-.6-.9-1-1.2-.5-.4-1.1-.6-1.7-.6zm.8 4.3c-.4 0-.8-.1-1-.4-.2-.3-.3-.7-.3-1.3 0-.6.1-1 .3-1.3.2-.3.6-.4 1-.4.4 0 .7.1 1 .4.2.3.3.7.3 1.3 0 .6-.1 1-.3 1.3-.3.3-.6.4-1 .4zm6.6-4.3l-1.4 5.4-1.3-5.4h-1.9l2.3 7.3h1.8l1.4-4.8 1.4 4.8h1.8l2.3-7.3h-1.9l-1.3 5.4-1.4-5.4h-1.8z" fill="#FF9900"/><path d="M3.5 18.5c5.3 3.5 12 3.5 17 0-.4-.4-.9-.8-1.4-1.1-4.2 2.8-9.8 2.8-14.2 0-.5.4-.9.8-1.4 1.1z" fill="#FF9900"/></svg>
+                </span>
+                <span class="skill-name">AWS</span>
+              </div>
+              <div class="marquee-pill skill-badge">
+                <span class="skill-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C9.5 2 8 4 8 7c0 1.5.3 3 .8 4.5C7.5 12.5 6 15 6 18c0 2 2 3.5 5 3.5h2c3 0 5-1.5 5-3.5 0-3-1.5-5.5-2.8-6.5.5-1.5.8-3 .8-4.5 0-3-1.5-5-4-5z" fill="#FFFFFF"/><path d="M12 2c-2.5 0-4 2-4 5 0 1.5.3 3 .8 4.5 1.5-.5 3-.5 4.4 0 .5-1.5.8-3 .8-4.5 0-3-1.5-5-4-5z" fill="#000000"/><circle cx="10" cy="6.5" r="1" fill="#FFFFFF"/><circle cx="14" cy="6.5" r="1" fill="#FFFFFF"/><circle cx="10" cy="6.5" r="0.5" fill="#000000"/><circle cx="14" cy="6.5" r="0.5" fill="#000000"/><path d="M12 8c-1 0-1.8.4-1.8 1s.8 1 1.8 1 1.8-.4 1.8-1-.8-1-1.8-1z" fill="#FFA500"/><path d="M6 18.5c-1 1-1 2.5 1 2.5h2c-1-.5-1.5-1.5-1-2.5H6zm12 0c1 1 1 2.5-1 2.5h-2c1-.5 1.5-1.5 1-2.5h2z" fill="#FFA500"/></svg>
+                </span>
+                <span class="skill-name">Linux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 03 — MY JOURNEY: Scroll-Scrubbed Cinematic Timeline -->
+    <div class="journey-scroll-track" id="journey">
+      <section class="journey-sticky" aria-label="My professional and educational journey">
+        <!-- Ambient atmospheric canvas (floating subtle particles & soft blue filament waves) -->
+        <canvas class="journey-ambient-canvas" id="journey-ambient-canvas" aria-hidden="true"></canvas>
+
+        <div class="journey-container">
+          <!-- Section Header -->
+          <div class="journey-header" id="journey-header">
+            <div class="section-head">
+              <span class="eyebrow">03 — THE JOURNEY</span>
+              <span class="section-rule"></span>
+              <span class="section-aside">EXPERIENCE &amp; GROWTH</span>
+            </div>
+            <div class="journey-title-wrap">
+              <h2 class="journey-headline">
+                From Curiosity<br />
+                to <span class="journey-highlight">Impact.</span>
+              </h2>
+              <p class="journey-sub">
+                A journey of continuous learning, real-world experience, and building solutions that matter.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Trajectory Stage (SVG Path + Nodes + Staggered Milestone Cards) -->
+          <div class="journey-stage" id="journey-stage">
+            <!-- Scalable SVG Trajectory with Core Glow and Animated Dashoffset -->
+            <svg class="journey-svg" id="journey-svg" viewBox="0 0 1400 480" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="journey-path-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#4F8CFF" stop-opacity="0.85" />
+                  <stop offset="45%" stop-color="#5CE1E6" stop-opacity="0.95" />
+                  <stop offset="100%" stop-color="#A8D2FF" stop-opacity="1" />
+                </linearGradient>
+                <filter id="journey-glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="5" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+                <marker id="journey-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#A8D2FF" />
+                </marker>
+              </defs>
+
+              <!-- Ambient faint background waves matching reference -->
+              <path class="journey-bg-wave" d="M 0 340 C 200 320, 420 250, 680 220 C 940 190, 1180 120, 1400 80" />
+              <path class="journey-bg-wave wave-2" d="M 0 290 C 260 300, 520 210, 820 180 C 1100 150, 1260 70, 1400 40" />
+
+              <!-- Outer Glowing Blur Path (driven in lockstep by stroke-dashoffset) -->
+              <path
+                class="journey-path-glow"
+                id="journey-path-glow"
+                d="M 25 280 C 60 272, 95 260, 135 260 C 195 260, 250 274, 295 250 C 322 235, 342 215, 361 210 C 421 196, 474 220, 521 196 C 550 178, 570 162, 587 158 C 647 144, 700 168, 750 144 C 778 128, 796 118, 813 114 C 873 100, 926 124, 976 100 C 1004 84, 1022 76, 1039 72 C 1099 58, 1152 82, 1202 60 C 1228 48, 1246 44, 1265 42 C 1300 34, 1335 26, 1370 22"
+              />
+
+              <!-- Core Vibrant Luminous Path with Flowing Crests & Valleys -->
+              <path
+                class="journey-path-core"
+                id="journey-path-core"
+                d="M 25 280 C 60 272, 95 260, 135 260 C 195 260, 250 274, 295 250 C 322 235, 342 215, 361 210 C 421 196, 474 220, 521 196 C 550 178, 570 162, 587 158 C 647 144, 700 168, 750 144 C 778 128, 796 118, 813 114 C 873 100, 926 124, 976 100 C 1004 84, 1022 76, 1039 72 C 1099 58, 1152 82, 1202 60 C 1228 48, 1246 44, 1265 42 C 1300 34, 1335 26, 1370 22"
+                marker-end="url(#journey-arrow)"
+              />
+
+              <!-- Nodes & Vertical Drop Stems (Year placed directly ABOVE node; Stem drops down to card) -->
+              <!-- Node 0: (135, 260) — 2021 -->
+              <g class="journey-node-group" id="journey-node-0" data-index="0">
+                <text class="node-year" x="135" y="236" text-anchor="middle">2021</text>
+                <line class="node-stem" x1="135" y1="260" x2="135" y2="292" />
+                <circle class="node-halo" cx="135" cy="260" r="16" />
+                <circle class="node-ring" cx="135" cy="260" r="8" />
+                <circle class="node-core" cx="135" cy="260" r="4.5" />
+              </g>
+
+              <!-- Node 1: (361, 210) — 2023 -->
+              <g class="journey-node-group" id="journey-node-1" data-index="1">
+                <text class="node-year" x="361" y="186" text-anchor="middle">2023</text>
+                <line class="node-stem" x1="361" y1="210" x2="361" y2="242" />
+                <circle class="node-halo" cx="361" cy="210" r="16" />
+                <circle class="node-ring" cx="361" cy="210" r="8" />
+                <circle class="node-core" cx="361" cy="210" r="4.5" />
+              </g>
+
+              <!-- Node 2: (587, 158) — 2024 -->
+              <g class="journey-node-group" id="journey-node-2" data-index="2">
+                <text class="node-year" x="587" y="134" text-anchor="middle">2024</text>
+                <line class="node-stem" x1="587" y1="158" x2="587" y2="190" />
+                <circle class="node-halo" cx="587" cy="158" r="16" />
+                <circle class="node-ring" cx="587" cy="158" r="8" />
+                <circle class="node-core" cx="587" cy="158" r="4.5" />
+              </g>
+
+              <!-- Node 3: (813, 114) — 2026 -->
+              <g class="journey-node-group" id="journey-node-3" data-index="3">
+                <text class="node-year" x="813" y="90" text-anchor="middle">2026</text>
+                <line class="node-stem" x1="813" y1="114" x2="813" y2="146" />
+                <circle class="node-halo" cx="813" cy="114" r="16" />
+                <circle class="node-ring" cx="813" cy="114" r="8" />
+                <circle class="node-core" cx="813" cy="114" r="4.5" />
+              </g>
+
+              <!-- Node 4: (1039, 72) — 2026 -->
+              <g class="journey-node-group" id="journey-node-4" data-index="4">
+                <text class="node-year" x="1039" y="48" text-anchor="middle">2026</text>
+                <line class="node-stem" x1="1039" y1="72" x2="1039" y2="104" />
+                <circle class="node-halo" cx="1039" cy="72" r="16" />
+                <circle class="node-ring" cx="1039" cy="72" r="8" />
+                <circle class="node-core" cx="1039" cy="72" r="4.5" />
+              </g>
+
+              <!-- Node 5: (1265, 42) — NOW / ONGOING -->
+              <g class="journey-node-group" id="journey-node-5" data-index="5">
+                <text class="node-year" x="1265" y="18" text-anchor="middle">NOW</text>
+                <line class="node-stem" x1="1265" y1="42" x2="1265" y2="74" />
+                <circle class="node-halo" cx="1265" cy="42" r="16" />
+                <circle class="node-ring" cx="1265" cy="42" r="8" />
+                <circle class="node-core" cx="1265" cy="42" r="4.5" />
+              </g>
+            </svg>
+
+            <!-- Milestone Cards Grid (anchored below nodes, staggered elevations) -->
+            <div class="journey-cards" id="journey-cards">
+              <!-- Card 1 -->
+              <article class="journey-card card-pos-0" data-milestone="0">
+                <div class="journey-card-top">
+                  <div class="journey-icon-wrap icon-grad-blue">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
+                  </div>
+                  <div class="journey-card-title-group">
+                    <div class="journey-title-row">
+                      <h3 class="journey-card-title">Intermediate</h3>
+                      <span class="journey-year-pill">2021</span>
+                    </div>
+                    <span class="journey-card-sub">Class 11 – 12 · MPC</span>
+                  </div>
+                </div>
+                <p class="journey-card-body">
+                  Built a foundation in mathematics, physics, analytical thinking, and problem-solving.
+                </p>
+                <div class="journey-card-footer">
+                  <span class="journey-badge badge-education">EDUCATION</span>
+                </div>
+              </article>
+
+              <!-- Card 2 -->
+              <article class="journey-card card-pos-1" data-milestone="1">
+                <div class="journey-card-top">
+                  <div class="journey-icon-wrap icon-grad-cyan">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  </div>
+                  <div class="journey-card-title-group">
+                    <div class="journey-title-row">
+                      <h3 class="journey-card-title">B.Tech in CSE</h3>
+                      <span class="journey-year-pill">2023</span>
+                    </div>
+                    <span class="journey-card-sub">SASI Institute of Tech (2023–27)</span>
+                  </div>
+                </div>
+                <p class="journey-card-body">
+                  Developing expertise in software engineering, full-stack development, AI/ML, and building practical applications.
+                </p>
+                <div class="journey-card-footer">
+                  <span class="journey-badge badge-education">EDUCATION</span>
+                </div>
+              </article>
+
+              <!-- Card 3 -->
+              <article class="journey-card card-pos-2" data-milestone="2">
+                <div class="journey-card-top">
+                  <div class="journey-icon-wrap icon-grad-teal">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  </div>
+                  <div class="journey-card-title-group">
+                    <div class="journey-title-row">
+                      <h3 class="journey-card-title">Springboard</h3>
+                      <span class="journey-year-pill">2024</span>
+                    </div>
+                    <span class="journey-card-sub">Infosys Springboard</span>
+                  </div>
+                </div>
+                <p class="journey-card-body">
+                  Gained practical software-development experience and strengthened programming and application-development fundamentals through internship and learning activities.
+                </p>
+                <div class="journey-card-footer">
+                  <span class="journey-badge badge-internship">INTERNSHIP</span>
+                </div>
+              </article>
+
+              <!-- Card 4 -->
+              <article class="journey-card card-pos-3" data-milestone="3">
+                <div class="journey-card-top">
+                  <div class="journey-icon-wrap icon-grad-nitap">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V11a2 2 0 0 1-2 2h-1v2.5a2.5 2.5 0 0 1-5 0V15H5a2 2 0 0 1-2-2V9.5C1.8 8.8 1 7.5 1 6a4 4 0 0 1 8 0c0 .8-.2 1.5-.6 2.1l1.6 1.4h2V6a4 4 0 0 1 4-4z"/></svg>
+                  </div>
+                  <div class="journey-card-title-group">
+                    <div class="journey-title-row">
+                      <h3 class="journey-card-title">NITAP Internship</h3>
+                      <span class="journey-year-pill">2026</span>
+                    </div>
+                    <span class="journey-card-sub">NIT Andhra Pradesh · iMentor</span>
+                  </div>
+                </div>
+                <p class="journey-card-body">
+                  Worked as a Lead Socratic Agent Developer, contributing to AI-agent systems and research-oriented development using the technologies documented in my portfolio.
+                </p>
+                <div class="journey-card-footer">
+                  <span class="journey-badge badge-internship">INTERNSHIP</span>
+                </div>
+              </article>
+
+              <!-- Card 5 -->
+              <article class="journey-card card-pos-4" data-milestone="4">
+                <div class="journey-card-top">
+                  <div class="journey-icon-wrap icon-grad-ai">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>
+                  </div>
+                  <div class="journey-card-title-group">
+                    <div class="journey-title-row">
+                      <h3 class="journey-card-title">Machine Learning &amp; AI</h3>
+                      <span class="journey-year-pill">2026</span>
+                    </div>
+                    <span class="journey-card-sub">Amazon ML Summer School '26</span>
+                  </div>
+                </div>
+                <p class="journey-card-body">
+                  Selected for Amazon ML Summer School 2026, with learning focused on machine learning and related AI concepts.
+                </p>
+                <div class="journey-card-footer">
+                  <span class="journey-badge badge-aiml">AI / ML</span>
+                </div>
+              </article>
+
+              <!-- Card 6 -->
+              <article class="journey-card card-pos-5" data-milestone="5">
+                <div class="journey-card-top">
+                  <div class="journey-icon-wrap icon-grad-rocket">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                  </div>
+                  <div class="journey-card-title-group">
+                    <div class="journey-title-row">
+                      <h3 class="journey-card-title">Building What's Next</h3>
+                      <span class="journey-year-pill">NOW</span>
+                    </div>
+                    <span class="journey-card-sub">Full-Stack · AI/ML · Systems</span>
+                  </div>
+                </div>
+                <p class="journey-card-body">
+                  Continuing to develop full-stack applications, explore AI/ML systems, and build useful products that address real-world problems.
+                </p>
+                <div class="journey-card-footer">
+                  <span class="journey-badge badge-ongoing">ONGOING</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Bottom Statistics Panel (Matches reference 4-column bar) -->
+          <div class="journey-stats-bar" id="journey-stats-bar">
+            <div class="journey-stat-col" data-stat="0">
+              <div class="journey-stat-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+              <div class="journey-stat-data">
+                <strong class="journey-stat-num">3+</strong>
+                <span class="journey-stat-lbl">Years of Learning</span>
+              </div>
+            </div>
+
+            <div class="journey-stat-col" data-stat="1">
+              <div class="journey-stat-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <div class="journey-stat-data">
+                <strong class="journey-stat-num">2</strong>
+                <span class="journey-stat-lbl">Internships</span>
+              </div>
+            </div>
+
+            <div class="journey-stat-col" data-stat="2">
+              <div class="journey-stat-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div class="journey-stat-data">
+                <strong class="journey-stat-num">10+</strong>
+                <span class="journey-stat-lbl">Projects Built</span>
+              </div>
+            </div>
+
+            <div class="journey-stat-col" data-stat="3">
+              <div class="journey-stat-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18.178 8c5.096 0 5.096 8 0 8-5.095 0-7.26-8-12.355-8-5.096 0-5.096 8 0 8 5.095 0 7.26-8 12.355-8z"/></svg>
+              </div>
+              <div class="journey-stat-data">
+                <strong class="journey-stat-num">∞</strong>
+                <span class="journey-stat-lbl">More to Explore</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 04 — SELECTED WORK (PROJECTS) SECTION -->
+    <section class="work section" id="work">
+      <div class="section-head">
+        <span class="eyebrow">04 — SELECTED WORK</span>
+        <span class="section-rule"></span>
+        <span class="section-aside">A FEW THINGS I’VE BUILT</span>
+      </div>
+
+      <div class="work-header">
+        <div class="work-title-wrap">
+          <h2 class="work-headline">
+            Ideas,<br />
+            built into <span class="work-highlight">reality.</span>
+          </h2>
+        </div>
+        <p class="work-sub">
+          A selection of projects across full-stack development, AI/ML, and real-world applications. Each project reflects a problem, a solution, and the technologies that bring it to life.
+        </p>
+      </div>
+
+      <!-- Category Filter Bar & Action Button -->
+      <div class="work-controls-bar">
+        <div class="work-filters" role="tablist" aria-label="Filter projects by category">
+          <button type="button" class="work-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">
+            <svg class="filter-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>All Projects</span>
+          </button>
+          <button type="button" class="work-filter-btn" data-filter="web-apps" role="tab" aria-selected="false">
+            <svg class="filter-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span>Web Apps</span>
+          </button>
+          <button type="button" class="work-filter-btn" data-filter="ai-ml" role="tab" aria-selected="false">
+            <svg class="filter-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a4.5 4.5 0 0 0-4.4 3.5A4.5 4.5 0 0 0 4 9.5a4.5 4.5 0 0 0 .5 4.5 4.5 4.5 0 0 0 3.1 3.9 4.5 4.5 0 0 0 4.4 3.5 4.5 4.5 0 0 0 3.6-1.9 4.5 4.5 0 0 0 3.9-3.1 4.5 4.5 0 0 0 .5-4.4A4.5 4.5 0 0 0 16.4 5.5 4.5 4.5 0 0 0 12 2z"></path><path d="M12 8v8M8 12h8"></path></svg>
+            <span>AI / ML</span>
+          </button>
+          <button type="button" class="work-filter-btn" data-filter="backend" role="tab" aria-selected="false">
+            <svg class="filter-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            <span>Backend</span>
+          </button>
+          <button type="button" class="work-filter-btn" data-filter="tools" role="tab" aria-selected="false">
+            <svg class="filter-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6-8.5 8.5a2 2 0 0 1-1.4.6H4v-2.4c0-.5.2-1 .6-1.4l8.5-8.5 1.6 1.6z"></path><path d="M16 4l4 4-2 2-4-4 2-2z"></path></svg>
+            <span>Tools</span>
+          </button>
+          <button type="button" class="work-filter-btn" data-filter="mobile" role="tab" aria-selected="false">
+            <svg class="filter-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            <span>Mobile</span>
+          </button>
+        </div>
+
+        <a href="projects.html" class="work-view-all-btn" aria-label="View all 15 projects on dedicated projects page">
+          <span class="view-all-circle" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+          <span>View All Projects (15)</span>
+        </a>
+      </div>
+
+      <!-- 2x2 Responsive Grid of Large Glassmorphic Project Cards -->
+      <div class="work-grid" aria-label="Featured projects grid">
+
+        <!-- Card 01: Pawdentify (AI / ML) -->
+        <article class="project-card card-glow-blue" data-category="ai-ml tools mobile" id="project-pawdentify" data-repo-url="https://github.com/susatwik/pawdentify" data-demo-url="https://pawdentify-frontend.vercel.app">
+          <div class="project-card-inner">
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span class="project-num">01</span>
+                <span class="project-cat cat-blue">AI / ML</span>
+              </div>
+              <h3 class="project-title"><a href="https://github.com/susatwik/pawdentify" target="_blank" rel="noopener noreferrer">Pawdentify</a></h3>
+              <p class="project-desc">
+                An AI-powered dog breed identification system using computer vision and a modern, intuitive web interface.
+              </p>
+              <div class="project-action-row">
+                <a href="https://pawdentify-frontend.vercel.app" target="_blank" rel="noopener noreferrer" class="project-action-btn project-demo-btn" aria-label="View Pawdentify Live Demo">
+                  <span>Live Demo</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/susatwik/pawdentify" target="_blank" rel="noopener noreferrer" class="project-action-btn project-repo-btn" aria-label="View Pawdentify repository on GitHub">
+                  <span>Source Code</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+              <div class="project-tech-badges">
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11.91 2c-5.09 0-4.78 2.21-4.78 2.21l.01 2.29h4.87v.69H5.13S2 6.82 2 11.93c0 5.12 2.73 4.94 2.73 4.94h1.63v-2.3s-.09-2.73 2.68-2.73h4.63s2.58.04 2.58-2.52V4.52S16.99 2 11.91 2zm-2.6 1.54a.88.88 0 1 1 0 1.76.88.88 0 0 1 0-1.76z" fill="#3776AB"/><path d="M12.09 22c5.09 0 4.78-2.21 4.78-2.21l-.01-2.29h-4.87v-.69h6.88s3.13.37 3.13-4.74c0-5.12-2.73-4.94-2.73-4.94h-1.63v2.3s.09 2.73-2.68 2.73H10.34s-2.58-.04-2.58 2.52v4.8s-.75 2.52 4.33 2.52zm2.6-1.54a.88.88 0 1 1 0-1.76.88.88 0 0 1 0 1.76z" fill="#FFD438"/></svg></span>
+                  <span>Python</span>
+                </span>
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2a9 9 0 0 0-9 9c0 4.2 2.9 7.7 6.8 8.7L12 17.5l2.2 2.2C18.1 18.7 21 15.2 21 11a9 9 0 0 0-9-9zm3 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="#EE4C2C"/><circle cx="15.5" cy="6.5" r="1.5" fill="#FF6F00"/></svg></span>
+                  <span>PyTorch</span>
+                </span>
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7" r="4.5" stroke="#ED1C24" stroke-width="2"/><circle cx="7.5" cy="15.5" r="4.5" stroke="#00A651" stroke-width="2"/><circle cx="16.5" cy="15.5" r="4.5" stroke="#2E3192" stroke-width="2"/></svg></span>
+                  <span>OpenCV</span>
+                </span>
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.2" transform="rotate(120 12 12)"/></svg></span>
+                  <span>React</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Right Column: Visual Mockup -->
+            <div class="project-visual-wrapper">
+              <a href="https://github.com/susatwik/pawdentify" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="Open Pawdentify on GitHub">
+                <div class="mockup-stage mockup-pawdentify">
+                  <div class="mockup-bg-card"></div>
+                  <div class="mockup-window-card">
+                    <div class="mockup-paw-header">
+                      <span class="mockup-window-title">Top Breed Matches</span>
+                      <span class="mockup-window-dot dot-blue"></span>
+                    </div>
+                    <div class="mockup-paw-body">
+                      <div class="mockup-dog-photo-wrap">
+                        <div class="mockup-dog-photo">
+                          <!-- Polished Golden Retriever Vector Artwork -->
+                          <svg viewBox="0 0 120 100" class="dog-svg" aria-hidden="true">
+                            <defs>
+                              <linearGradient id="dog-fur-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#EAA85E" />
+                                <stop offset="50%" stop-color="#CA853A" />
+                                <stop offset="100%" stop-color="#8F5318" />
+                              </linearGradient>
+                              <linearGradient id="dog-snout-1" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#3D2513" />
+                                <stop offset="100%" stop-color="#1A0F07" />
+                              </linearGradient>
+                            </defs>
+                            <path d="M 18 28 C 10 40, 8 70, 24 80 C 32 76, 34 50, 30 36 Z" fill="#9C5D1F"/>
+                            <path d="M 102 28 C 110 40, 112 70, 96 80 C 88 76, 86 50, 90 36 Z" fill="#9C5D1F"/>
+                            <ellipse cx="60" cy="46" rx="36" ry="34" fill="url(#dog-fur-1)"/>
+                            <path d="M 52 20 Q 60 14 68 20 Q 65 38 60 40 Q 55 38 52 20 Z" fill="#F4CA8E" opacity="0.6"/>
+                            <ellipse cx="44" cy="40" rx="5" ry="6" fill="#1C1008"/>
+                            <circle cx="45.5" cy="38.5" r="1.8" fill="#FFFFFF"/>
+                            <ellipse cx="76" cy="40" rx="5" ry="6" fill="#1C1008"/>
+                            <circle cx="77.5" cy="38.5" r="1.8" fill="#FFFFFF"/>
+                            <ellipse cx="60" cy="58" rx="19" ry="16" fill="#DF9F53"/>
+                            <path d="M 53 52 Q 60 50 67 52 Q 68 60 60 62 Q 52 60 53 52 Z" fill="url(#dog-snout-1)"/>
+                            <path d="M 57 62 Q 60 68 63 62" stroke="#1A0F07" stroke-width="2" fill="none"/>
+                            <path d="M 57 64 Q 60 74 63 64 Z" fill="#E86E80"/>
+                          </svg>
+                        </div>
+                        <div class="mockup-badge-tag">
+                          <span class="badge-tag-dot"></span>
+                          <span>Golden Retriever 98.4%</span>
+                        </div>
+                      </div>
+                      <div class="mockup-predictions-list">
+                        <div class="prediction-item is-primary">
+                          <div class="pred-avatar dog-avatar-1"></div>
+                          <div class="pred-info">
+                            <div class="pred-name">Golden Retriever</div>
+                            <div class="pred-bar-wrap"><div class="pred-bar bar-blue" style="width: 96.4%;"></div></div>
+                          </div>
+                          <span class="pred-val">96.4%</span>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="pred-avatar dog-avatar-2"></div>
+                          <div class="pred-info">
+                            <div class="pred-name">Labrador Retriever</div>
+                            <div class="pred-bar-wrap"><div class="pred-bar bar-subtle" style="width: 25%;"></div></div>
+                          </div>
+                          <span class="pred-val">1.2%</span>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="pred-avatar dog-avatar-3"></div>
+                          <div class="pred-info">
+                            <div class="pred-name">Flat-Coated Retriever</div>
+                            <div class="pred-bar-wrap"><div class="pred-bar bar-subtle" style="width: 12%;"></div></div>
+                          </div>
+                          <span class="pred-val">0.3%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 02: Certify (Web App) -->
+        <article class="project-card card-glow-violet" data-category="web-apps backend mobile" id="project-certify" data-demo-url="https://site-certificate-generator.vercel.app/">
+          <div class="project-card-inner">
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span class="project-num">02</span>
+                <span class="project-cat cat-violet">WEB APP</span>
+              </div>
+              <h3 class="project-title"><a href="https://site-certificate-generator.vercel.app/" target="_blank" rel="noopener noreferrer">Certify</a></h3>
+              <p class="project-desc">
+                A digital certificate generation, management, and verification platform designed to issue, share, and validate credentials securely.
+              </p>
+              <div class="project-action-row">
+                <a href="https://site-certificate-generator.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action-btn project-demo-btn" aria-label="View Certify Live Demo">
+                  <span>Live Demo</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <span class="project-status-pill">Private Repository</span>
+              </div>
+              <div class="project-tech-badges">
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#000000" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/><path d="M15.5 8.5v7m-7-7v7l7.5-7" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  <span>Next.js</span>
+                </span>
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#3178C6"/><path d="M4.5 10.5h6v1.8H8.5v6.2h-2v-6.2H4.5v-1.8zm7.5 7.9c.9.5 2 .8 3.1.8 1.8 0 2.8-.9 2.8-2.2 0-1.3-.8-1.9-2.2-2.5-.9-.4-1.3-.7-1.3-1.2 0-.5.4-.9 1.2-.9.8 0 1.5.3 2 .6l.6-1.5c-.6-.4-1.5-.6-2.5-.6-1.8 0-2.8 1-2.8 2.2 0 1.2.8 1.9 2.2 2.5 1 .4 1.3.8 1.3 1.3 0 .6-.5 1-1.4 1-.9 0-1.8-.4-2.4-.8l-.6 1.3z" fill="#FFFFFF"/></svg></span>
+                  <span>TypeScript</span>
+                </span>
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 6c-3.6 0-5.8 1.8-6.6 5.4 1.4-1.8 3.1-2.5 5.1-2 1.15.28 2 1.15 2.9 2.1 1.5 1.55 3.3 3.4 7.1 3.4 3.6 0 5.8-1.8 6.6-5.4-1.4 1.8-3.1 2.5-5.1 2-1.15-.28-2-1.15-2.9-2.1C17.6 7.85 15.8 6 12 6zM5.4 13.5C1.8 13.5-.4 15.3-1.2 18.9c1.4-1.8 3.1-2.5 5.1-2 1.15.28 2 1.15 2.9 2.1 1.5 1.55 3.3 3.4 7.1 3.4z" transform="scale(0.85) translate(2, 0)" fill="#06B6D4"/></svg></span>
+                  <span>Tailwind CSS</span>
+                </span>
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M13.5 2.5L3 14.5h8.5l-2 7 11.5-12h-8.5l2-7z" fill="#3ECF8E"/></svg></span>
+                  <span>Supabase</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Right Column: Visual Mockup -->
+            <div class="project-visual-wrapper">
+              <a href="https://site-certificate-generator.vercel.app/" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="View Certify Live Demo">
+                <div class="mockup-stage mockup-certify">
+                  <div class="mockup-bg-card-tilted"></div>
+                  <div class="mockup-cert-card">
+                    <div class="cert-watermark">VERIFIED</div>
+                    <div class="cert-header-tiny">SUSATWIK CREDENTIAL NETWORK</div>
+                    <div class="cert-title-big">Certificate<br />of Achievement</div>
+                    <div class="cert-footer-row">
+                      <div class="cert-medallion">
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <circle cx="12" cy="10" r="7" fill="#F59E0B" stroke="#FDE68A" stroke-width="1.2"/>
+                          <path d="M12 7l1 2 2.2.3-1.6 1.5.4 2.2-2-1-2 1 .4-2.2-1.6-1.5 2.2-.3 1-2z" fill="#78350F"/>
+                          <path d="M8.5 15.5l-2 5.5 4-2 1.5 2V16M15.5 15.5l2 5.5-4-2-1.5 2V16" fill="#D97706"/>
+                        </svg>
+                      </div>
+                      <div class="cert-qr">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" aria-hidden="true">
+                          <rect x="2" y="2" width="7" height="7"/>
+                          <rect x="15" y="2" width="7" height="7"/>
+                          <rect x="2" y="15" width="7" height="7"/>
+                          <line x1="15" y1="15" x2="19" y2="15"/><line x1="15" y1="19" x2="19" y2="19"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cert-status-pill-card">
+                    <div class="cert-status-row">
+                      <span class="cert-check">✓</span>
+                      <span class="cert-status-text">Valid Certificate</span>
+                    </div>
+                    <div class="cert-meta-item">
+                      <span class="cert-meta-icon">👤</span>
+                      <span>Issued by Susatwik Manuri</span>
+                    </div>
+                    <div class="cert-meta-item">
+                      <span class="cert-meta-icon">📅</span>
+                      <span>Verified on Oct 17, 2026</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 03: Task Management App (TaskFlow - Full Stack) -->
+        <article class="project-card card-glow-teal" data-category="web-apps backend tools mobile" id="project-taskflow" data-repo-url="https://github.com/susatwik/taskpilot-ai">
+          <div class="project-card-inner">
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span class="project-num">03</span>
+                <span class="project-cat cat-teal">FULL STACK</span>
+              </div>
+              <h3 class="project-title"><a href="https://github.com/susatwik/taskpilot-ai" target="_blank" rel="noopener noreferrer">TaskFlow</a></h3>
+              <p class="project-desc">
+                A productivity and task management web application with real-time collaboration, authentication, and analytics.
+              </p>
+              <div class="project-action-row">
+                <a href="https://github.com/susatwik/taskpilot-ai" target="_blank" rel="noopener noreferrer" class="project-action-btn project-repo-btn" aria-label="View TaskFlow repository on GitHub">
+                  <span>Source Code</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+              <div class="project-tech-badges">
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.2" transform="rotate(120 12 12)"/></svg></span>
+                  <span>React</span>
+                </span>
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2l9 5.2v10.4L12 22.8 3 17.6V7.2L12 2z" fill="#5FA04E"/><path d="M12 4.5l-6.8 3.9v7.8L12 20.1l6.8-3.9V8.4L12 4.5z" fill="#0B0F17"/><path d="M11 8h2v8h-2z" fill="#5FA04E"/><circle cx="12" cy="7.2" r="1" fill="#5FA04E"/></svg></span>
+                  <span>Node.js</span>
+                </span>
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1E2838" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/><text x="12" y="15.5" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-weight="700" font-size="9" fill="#FFFFFF" text-anchor="middle">ex</text></svg></span>
+                  <span>Express.js</span>
+                </span>
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2.5C7.5 2.5 4 5.8 4 10.2c0 3.2 1.8 6 4.6 7.4-.2.9-.6 2.1-1.6 3.1 1.7 0 3.4-.8 4.4-2.1.9.3 1.9.4 2.9.4 4.5 0 8-3.3 8-7.7 0-4.4-3.5-8.8-10.3-8.8z" fill="#336791"/><path d="M13.5 8c-1.5 0-2.5 1-2.5 2.5 0 2 1.5 3.5 3.5 3.5s2.5-1 2.5-2.5c0-2-1.5-3.5-3.5-3.5z" fill="#FFFFFF"/></svg></span>
+                  <span>PostgreSQL</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Right Column: Visual Mockup -->
+            <div class="project-visual-wrapper">
+              <a href="https://github.com/susatwik/taskpilot-ai" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="Open TaskFlow repository on GitHub">
+                <div class="mockup-stage mockup-taskflow">
+                  <div class="mockup-kanban-board">
+                    <div class="kanban-bar">
+                      <div class="kanban-brand">
+                        <span class="kanban-logo-icon">❖</span>
+                        <span>TaskFlow</span>
+                      </div>
+                      <div class="kanban-avatars">
+                        <span class="avatar-chip av-1">SM</span>
+                        <span class="avatar-chip av-2">JD</span>
+                        <span class="avatar-chip av-3">AL</span>
+                        <span class="avatar-chip av-more">+2</span>
+                      </div>
+                    </div>
+                    <div class="kanban-body">
+                      <div class="kanban-sidebar">
+                        <span class="side-icon active">⊞</span>
+                        <span class="side-icon">✓</span>
+                        <span class="side-icon">📊</span>
+                        <span class="side-icon">⚙</span>
+                      </div>
+                      <div class="kanban-columns">
+                        <div class="kanban-col">
+                          <div class="col-head">To Do <span class="col-count">2</span></div>
+                          <div class="task-card">
+                            <span class="task-label">Design UI</span>
+                            <span class="task-tag tag-blue">Design</span>
+                          </div>
+                          <div class="task-card">
+                            <span class="task-label">Build API</span>
+                            <span class="task-tag tag-purple">Backend</span>
+                          </div>
+                        </div>
+                        <div class="kanban-col">
+                          <div class="col-head">In Progress <span class="col-count">1</span></div>
+                          <div class="task-card">
+                            <span class="task-label">Write tests</span>
+                            <span class="task-tag tag-amber">QA</span>
+                          </div>
+                        </div>
+                        <div class="kanban-col">
+                          <div class="col-head">Done <span class="col-count">1</span></div>
+                          <div class="task-card">
+                            <span class="task-label">Deploy</span>
+                            <span class="task-tag tag-green">Prod</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 04: Zero Waste Recipe Generator (AI / RAG) -->
+        <article class="project-card card-glow-indigo" data-category="ai-ml tools web-apps mobile" id="project-recipe" data-repo-url="https://github.com/susatwik/Zero-Waste-Recipes-Generator" data-demo-url="https://recipe-rescue-connect.lovable.app">
+          <div class="project-card-inner">
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span class="project-num">04</span>
+                <span class="project-cat cat-indigo">AI / RAG</span>
+              </div>
+              <h3 class="project-title"><a href="https://github.com/susatwik/Zero-Waste-Recipes-Generator" target="_blank" rel="noopener noreferrer">Zero Waste Recipe Generator</a></h3>
+              <p class="project-desc">
+                An intelligent culinary system using Retrieval-Augmented Generation (RAG) and LLMs to create creative recipes from surplus ingredients.
+              </p>
+              <div class="project-action-row">
+                <a href="https://recipe-rescue-connect.lovable.app" target="_blank" rel="noopener noreferrer" class="project-action-btn project-demo-btn" aria-label="View Zero Waste Recipe Generator Live Demo">
+                  <span>Live Demo</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/susatwik/Zero-Waste-Recipes-Generator" target="_blank" rel="noopener noreferrer" class="project-action-btn project-repo-btn" aria-label="View Zero Waste Recipe Generator repository on GitHub">
+                  <span>Source Code</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+              <div class="project-tech-badges">
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M9 17l-3-3a4 4 0 0 1 5.6-5.6l1.4 1.4" stroke="#22D3EE" stroke-width="2.2" stroke-linecap="round"/><path d="M15 7l3 3a4 4 0 0 1-5.6 5.6l-1.4-1.4" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/><circle cx="7" cy="11" r="1.5" fill="#22D3EE"/><circle cx="17" cy="13" r="1.5" fill="#F59E0B"/></svg></span>
+                  <span>LangChain</span>
+                </span>
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="12" r="3" fill="#6366F1"/><circle cx="19" cy="6" r="3" fill="#A855F7"/><circle cx="19" cy="18" r="3" fill="#EC4899"/><path d="M8 12h8M7.5 10.5l9-3M7.5 13.5l9 3" stroke="#FFFFFF" stroke-width="1.8"/></svg></span>
+                  <span>LangGraph</span>
+                </span>
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4.5 4.5 0 0 0-4.4 3.5A4.5 4.5 0 0 0 4 9.5a4.5 4.5 0 0 0 .5 4.5 4.5 4.5 0 0 0 3.1 3.9 4.5 4.5 0 0 0 4.4 3.5 4.5 4.5 0 0 0 3.6-1.9 4.5 4.5 0 0 0 3.9-3.1 4.5 4.5 0 0 0 .5-4.4A4.5 4.5 0 0 0 16.4 5.5 4.5 4.5 0 0 0 12 2z"/><path d="M12 8v8M8 12h8"/></svg></span>
+                  <span>OpenAI</span>
+                </span>
+                <span class="project-badge">
+                  <span class="badge-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#38BDF8" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="#38BDF8"/><path d="M12 3v5M12 16v5M3 12h5M16 12h5" stroke="#38BDF8" stroke-width="1.5"/></svg></span>
+                  <span>Vector DB</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Right Column: Visual Mockup -->
+            <div class="project-visual-wrapper">
+              <a href="https://github.com/susatwik/Zero-Waste-Recipes-Generator" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="Open Zero Waste Recipe Generator on GitHub">
+                <div class="mockup-stage mockup-knowledge">
+                  <div class="mockup-rag-window">
+                    <div class="rag-header-search">
+                      <span class="rag-search-text">Ask your ingredients...</span>
+                      <span class="rag-action-pill">Summarize recipe</span>
+                    </div>
+                    <div class="rag-main-content">
+                      <div class="rag-response-card">
+                        <div class="rag-bot-header">
+                          <span class="rag-bot-avatar">🍳</span>
+                          <span class="rag-bot-title">Zero-waste recipe suggestion:</span>
+                        </div>
+                        <ul class="rag-bullet-list">
+                          <li>• Matched: Tomato, Spinach &amp; Lentils</li>
+                          <li>• 15-min savory protein-rich bowl</li>
+                          <li>• Zero food waste achieved (98%)</li>
+                        </ul>
+                      </div>
+                      <div class="rag-actions-sidebar">
+                        <span class="rag-side-item" title="Upload ingredients">📤<small>Upload</small></span>
+                        <span class="rag-side-item" title="Process recipe">⚙<small>Process</small></span>
+                        <span class="rag-side-item" title="Search pairings">🔍<small>Search</small></span>
+                        <span class="rag-side-item active" title="AI Chef Chat">💬<small>Cook</small></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Prominent "View All Projects (15) →" Navigation CTA -->
+      <div class="work-view-more-cta">
+        <a href="projects.html" class="work-view-all-full-btn" aria-label="View all 15 projects on dedicated projects page">
+          <span>View All Projects (15)</span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 05 — ACHIEVEMENTS, LEADERSHIP & CERTIFICATIONS SECTION -->
+    <section class="credentials-section section" id="credentials">
+      <div class="section-head">
+        <span class="eyebrow">05 — ACHIEVEMENTS &amp; LEADERSHIP</span>
+        <span class="section-rule"></span>
+        <span class="section-aside">CAMPUS · INDUSTRY · RECOGNITION</span>
+      </div>
+
+      <div class="credentials-header">
+        <div class="credentials-heading-col">
+          <h2 class="credentials-title">
+            Leadership, impact, and <span class="credentials-highlight">recognized expertise.</span>
+          </h2>
+        </div>
+        <div class="credentials-sub-col">
+          <p class="credentials-sub">
+            A verified track record of student chapter chair stewardship, national hackathon coordination, corporate committee leadership, selective machine-learning programs, and certified engineering expertise.
+          </p>
+        </div>
+      </div>
+
+      <!-- Credentials Category Filter Bar -->
+      <div class="credentials-controls-bar">
+        <div class="credentials-filters" role="tablist" aria-label="Filter achievements and credentials">
+          <button type="button" class="cred-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">
+            <svg class="filter-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>All Credentials (12)</span>
+          </button>
+          <button type="button" class="cred-filter-btn" data-filter="leadership" role="tab" aria-selected="false">
+            <svg class="filter-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <span>Leadership &amp; Events</span>
+          </button>
+          <button type="button" class="cred-filter-btn" data-filter="achievements" role="tab" aria-selected="false">
+            <svg class="filter-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span>Achievements</span>
+          </button>
+          <button type="button" class="cred-filter-btn" data-filter="internships" role="tab" aria-selected="false">
+            <svg class="filter-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            <span>Internships</span>
+          </button>
+          <button type="button" class="cred-filter-btn" data-filter="certifications" role="tab" aria-selected="false">
+            <svg class="filter-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15l-2 5l9-9l-9-9l2 5l-7 4z"></path><circle cx="12" cy="8" r="7"></circle></svg>
+            <span>Certifications</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Credentials Main Grid -->
+      <div class="credentials-grid" aria-label="Achievements, leadership and certifications list">
+
+        <!-- Card 1: Featured Leadership Card (SITE ACM Student Chapter Chair + Events) -->
+        <article class="cred-featured-card cred-item card-glow-blue" data-category="leadership" id="cred-acm-chair">
+          <div class="cred-featured-top">
+            <div class="cred-featured-meta">
+              <span class="cred-badge badge-featured">
+                <span class="badge-dot" aria-hidden="true"></span>
+                <span>FEATURED LEADERSHIP</span>
+              </span>
+              <span class="cred-period">2024 – PRESENT</span>
+            </div>
+            <div class="cred-issuer-brand">
+              <span class="cred-org-tag">SASI INSTITUTE OF TECHNOLOGY &amp; ENGINEERING</span>
+            </div>
+          </div>
+
+          <div class="cred-featured-body">
+            <div class="cred-featured-main-col">
+              <div class="cred-title-row">
+                <div class="cred-logo-icon acm-logo-wrap" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                    <rect width="22" height="22" x="1" y="1" rx="4" fill="#0284C7"/>
+                    <path d="M6 18L10 6H12.5L16.5 18H14.2L13.3 15H9.2L8.3 18H6ZM9.8 13.2H12.7L11.25 8.2H11.2L9.8 13.2Z" fill="#FFFFFF"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="cred-featured-title">Chapter Chair — SITE ACM Student Chapter</h3>
+                  <p class="cred-featured-org">Association for Computing Machinery (ACM) Student Chapter</p>
+                </div>
+              </div>
+
+              <p class="cred-featured-desc">
+                Serving as the elected Chapter Chair of the SITE ACM Student Chapter, driving student computer-science initiatives, technical development cultures, and peer mentorship across campus. Lead executive chapter decisions, coordinate hands-on technical workshops, and foster collaborative problem-solving.
+              </p>
+
+              <div class="cred-initiatives-list">
+                <div class="cred-init-item">
+                  <span class="init-dot" aria-hidden="true"></span>
+                  <div class="init-content">
+                    <strong>Technical Community Leadership:</strong> Cultivating peer programming sessions, competitive coding bootcamps, and technical knowledge exchange for 200+ student members.
+                  </div>
+                </div>
+                <div class="cred-init-item">
+                  <span class="init-dot" aria-hidden="true"></span>
+                  <div class="init-content">
+                    <strong>Workshop &amp; Skill Coordination:</strong> Spearheaded hands-on workshops on full-stack architecture, Python programming, and modern AI/ML foundations.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sub-initiatives Triad inside Leadership Card -->
+            <div class="cred-featured-events-col">
+              <span class="events-col-title">KEY COORDINATED INITIATIVES</span>
+
+              <div class="cred-event-mini-card">
+                <div class="event-mini-header">
+                  <span class="event-tag">INSPIRA 2025</span>
+                  <span class="event-year">2025</span>
+                </div>
+                <h4 class="event-mini-title">Corporate Committee POC &amp; 24-Hour Hackathon Coordinator</h4>
+                <p class="event-mini-desc">
+                  Served as Corporate Committee Point of Contact and lead coordinator for a 24-hour collegiate hackathon, managing problem-statement curation, mentor schedules, and judging logistics.
+                </p>
+              </div>
+
+              <div class="cred-event-mini-card">
+                <div class="event-mini-header">
+                  <span class="event-tag">ANVESHNA 2026</span>
+                  <span class="event-year">2026</span>
+                </div>
+                <h4 class="event-mini-title">Sponsorship &amp; Partner Coordinator</h4>
+                <p class="event-mini-desc">
+                  Led corporate outreach and sponsorship coordination for the college technical symposium, engaging external sponsors and industry collaborators.
+                </p>
+              </div>
+
+              <div class="cred-event-mini-card">
+                <div class="event-mini-header">
+                  <span class="event-tag">SMART INDIA HACKATHON</span>
+                  <span class="event-year">SIH 2026</span>
+                </div>
+                <h4 class="event-mini-title">Internal Screening &amp; Nomination Coordinator</h4>
+                <p class="event-mini-desc">
+                  Coordinated institutional campus screening, team evaluations, and university nominations for the national-level Smart India Hackathon 2026.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cred-card-footer">
+            <span class="cred-verification-note">
+              <span class="verify-check" aria-hidden="true">✓</span>
+              <span>Verified Institutional &amp; ACM Chapter Leadership</span>
+            </span>
+            <a href="https://www.linkedin.com/in/susatwik/" target="_blank" rel="noopener noreferrer" class="cred-action-btn" aria-label="View ACM leadership profile on LinkedIn">
+              <span>View Leadership Profile</span>
+              <span class="btn-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Subgrid for compact achievement, internship, and certification cards -->
+        <div class="cred-subgrid">
+
+          <!-- Card: Hackathon Prayatna 2.0 (Achievements) -->
+          <article class="cred-card cred-item card-glow-amber" data-category="achievements" id="cred-prayatna">
+            <div class="cred-card-header">
+              <div class="cred-card-icon prayatna-logo-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="#F59E0B" fill-opacity="0.3" stroke="#F59E0B" stroke-width="1.6"/>
+                </svg>
+              </div>
+              <div class="cred-card-tags">
+                <span class="cred-badge badge-award">RUNNER-UP</span>
+                <span class="cred-year-tag">50+ TEAMS</span>
+              </div>
+            </div>
+
+            <h3 class="cred-card-title">Hackathon Prayatna 2.0 — Runner-up</h3>
+            <span class="cred-card-issuer">Prayatna 2.0 Hackathon</span>
+
+            <p class="cred-card-desc">
+              Secured Runner-up position in Prayatna 2.0, competing across multi-round technical challenges against 50+ participating engineering teams.
+            </p>
+
+            <div class="cred-card-badges">
+              <span class="mini-tech-tag">Hackathon</span>
+              <span class="mini-tech-tag">Runner-up</span>
+              <span class="mini-tech-tag">50+ Teams</span>
+            </div>
+
+            <div class="cred-card-bottom">
+              <span class="cred-verified-pill">● Verified Achievement</span>
+            </div>
+          </article>
+
+          <!-- Card: IEEE Quiz Competition (Achievements) -->
+          <article class="cred-card cred-item card-glow-blue" data-category="achievements" id="cred-ieee-quiz">
+            <div class="cred-card-header">
+              <div class="cred-card-icon ieee-logo-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="cred-card-tags">
+                <span class="cred-badge badge-award">RUNNER-UP</span>
+                <span class="cred-year-tag">IEEE</span>
+              </div>
+            </div>
+
+            <h3 class="cred-card-title">IEEE Quiz Competition — Runner-up</h3>
+            <span class="cred-card-issuer">IEEE Quiz Competition</span>
+
+            <p class="cred-card-desc">
+              Achieved Runner-up recognition in technical quiz competition organized by IEEE, evaluating engineering fundamentals, algorithms, and technical aptitude.
+            </p>
+
+            <div class="cred-card-badges">
+              <span class="mini-tech-tag">IEEE</span>
+              <span class="mini-tech-tag">Runner-up</span>
+              <span class="mini-tech-tag">Technical Quiz</span>
+            </div>
+
+            <div class="cred-card-bottom">
+              <span class="cred-verified-pill">● Verified Achievement</span>
+            </div>
+          </article>
+
+          <!-- Card: ACM Hackathon (Leadership & Events) -->
+          <article class="cred-card cred-item card-glow-teal" data-category="leadership achievements" id="cred-acm-hackathon">
+            <div class="cred-card-header">
+              <div class="cred-card-icon acm-hack-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <rect width="20" height="20" x="2" y="2" rx="4" fill="#0284C7" fill-opacity="0.25" stroke="#38BDF8" stroke-width="1.5"/>
+                  <path d="M8 12h8M12 8v8" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="cred-card-tags">
+                <span class="cred-badge badge-lead">ORGANIZER</span>
+                <span class="cred-year-tag">100+ PARTICIPANTS</span>
+              </div>
+            </div>
+
+            <h3 class="cred-card-title">ACM Hackathon — Organizer</h3>
+            <span class="cred-card-issuer">ACM Hackathon</span>
+
+            <p class="cred-card-desc">
+              Organizer for the ACM collegiate hackathon, coordinating problem statements, mentor facilitation, and event operations for over 100 participants.
+            </p>
+
+            <div class="cred-card-badges">
+              <span class="mini-tech-tag">ACM</span>
+              <span class="mini-tech-tag">Organizer</span>
+              <span class="mini-tech-tag">100+ Participants</span>
+            </div>
+
+            <div class="cred-card-bottom">
+              <span class="cred-verified-pill">● Verified Leadership</span>
+            </div>
+          </article>
+
+          <!-- Card: INSPIRA 2025 (Leadership & Events) -->
+          <article class="cred-card cred-item card-glow-violet" data-category="leadership" id="cred-inspira-card">
+            <div class="cred-card-header">
+              <div class="cred-card-icon inspira-logo-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9" fill="#A855F7" fill-opacity="0.2" stroke="#A855F7" stroke-width="1.5"/>
+                  <path d="M12 7v5l3 3" stroke="#C084FC" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="cred-card-tags">
+                <span class="cred-badge badge-lead">CORPORATE POC</span>
+                <span class="cred-year-tag">INSPIRA 2025</span>
+              </div>
+            </div>
+
+            <h3 class="cred-card-title">INSPIRA 2025 — Corporate Committee Point of Contact</h3>
+            <span class="cred-card-issuer">INSPIRA 2025</span>
+
+            <p class="cred-card-desc">
+              Served as Corporate Committee Point of Contact for INSPIRA 2025, handling corporate liaisons, sponsor coordination, and institutional committee operations.
+            </p>
+
+            <div class="cred-card-badges">
+              <span class="mini-tech-tag">INSPIRA 2025</span>
+              <span class="mini-tech-tag">Corporate POC</span>
+              <span class="mini-tech-tag">Event Operations</span>
+            </div>
+
+            <div class="cred-card-bottom">
+              <span class="cred-verified-pill">● Event Leadership</span>
+            </div>
+          </article>
+
+
+
+          <!-- Card 2: Amazon ML Summer School (Achievements) -->
+          <article class="cred-card cred-item card-glow-amber" data-category="achievements" id="cred-amazon-ml">
+            <div class="cred-card-header">
+              <div class="cred-card-icon amazon-logo-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M13.9 14.5c-2.4 1.8-5.9 2.7-8.9 2.7-4.2 0-8-1.5-10.9-4-.2-.2-.3-.5 0-.7.3-.2.6-.2.8 0 2.6 2.2 6.1 3.5 10 3.5 2.7 0 5.8-.8 8-2.3.4-.3.9.1.5.5zm1.5-1.2c-.3-.4-1.9-.2-2.7-.1-.2 0-.3-.2-.1-.4.9-1.2 2.4-1.7 2.7-1.3.4.4.2 2-.8 3-.2.2-.3.1-.3 0 .2-.4.9-1 .8-1.2z" fill="#F59E0B"/>
+                  <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="cred-card-tags">
+                <span class="cred-badge badge-merit">MERIT SELECTION</span>
+                <span class="cred-year-tag">2026</span>
+              </div>
+            </div>
+
+            <h3 class="cred-card-title">Amazon ML Summer School '26 Selection</h3>
+            <span class="cred-card-issuer">Amazon Science &amp; Engineering</span>
+
+            <p class="cred-card-desc">
+              Selected through a competitive screening program covering key pillars of machine learning: Supervised Learning, Deep Neural Networks, Dimensionality Reduction, Sequence Models, and Generative AI.
+            </p>
+
+            <div class="cred-card-badges">
+              <span class="mini-tech-tag">Deep Learning</span>
+              <span class="mini-tech-tag">LLMs</span>
+              <span class="mini-tech-tag">Optimization</span>
+            </div>
+
+            <div class="cred-card-bottom">
+              <span class="cred-verified-pill">● Competitive Cohort</span>
+              <a href="https://www.linkedin.com/in/susatwik/" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View Amazon ML Summer School selection on LinkedIn">
+                <span>View Details</span>
+                <span class="btn-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: NIT Andhra Pradesh iMentor (Internships) -->
+          <article class="cred-card cred-item card-glow-cyan" data-category="internships" id="cred-nit-ap">
+            <div class="cred-card-header">
+              <div class="cred-card-icon nit-logo-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3L2 8l10 5l10-5l-10-5z" fill="#06B6D4"/>
+                  <path d="M6 12.5v4c0 2.2 2.7 4 6 4s6-1.8 6-4v-4" stroke="#06B6D4" stroke-width="1.5"/>
+                  <line x1="22" y1="8" x2="22" y2="15" stroke="#06B6D4" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="cred-card-tags">
+                <span class="cred-badge badge-intern">AI RESEARCH INTERNSHIP</span>
+                <span class="cred-year-tag">2026</span>
+              </div>
+            </div>
+
+            <h3 class="cred-card-title">Lead Socratic Agent Developer (iMentor)</h3>
+            <span class="cred-card-issuer">National Institute of Technology (NIT) Andhra Pradesh</span>
+
+            <p class="cred-card-desc">
+              Researched and built the intelligent Socratic Tutoring Agent using LangChain, LangGraph, and FastAPI, developing stateful pedagogical conversation loops and graph-scaffolded inquiry.
+            </p>
+
+            <div class="cred-card-badges">
+              <span class="mini-tech-tag">LangGraph</span>
+              <span class="mini-tech-tag">FastAPI</span>
+              <span class="mini-tech-tag">AI Agents</span>
+            </div>
+
+            <div class="cred-card-bottom">
+              <span class="cred-verified-pill">● Research Internship</span>
+              <a href="https://github.com/susatwik/iMentor-Main" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View iMentor repository on GitHub">
+                <span>View Repository</span>
+                <span class="btn-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4: Infosys Springboard (Internships) -->
+          <article class="cred-card cred-item card-glow-teal" data-category="internships" id="cred-infosys">
+            <div class="cred-card-header">
+              <div class="cred-card-icon infosys-logo-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <rect width="20" height="20" x="2" y="2" rx="4" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1.5"/>
+                  <path d="M7 8h10M7 12h10M7 16h6" stroke="#34D399" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="cred-card-tags">
+                <span class="cred-badge badge-intern">INDUSTRY INTERNSHIP</span>
+                <span class="cred-year-tag">2024</span>
+              </div>
+            </div>
+
+            <h3 class="cred-card-title">Software Engineering Intern</h3>
+            <span class="cred-card-issuer">Infosys Springboard</span>
+
+            <p class="cred-card-desc">
+              Acquired hands-on software development training in object-oriented programming (Java), application architecture, modular backend logic, database queries, and collaborative engineering workflows.
+            </p>
+
+            <div class="cred-card-badges">
+              <span class="mini-tech-tag">Java</span>
+              <span class="mini-tech-tag">Full-Stack</span>
+              <span class="mini-tech-tag">OOP</span>
+            </div>
+
+            <div class="cred-card-bottom">
+              <span class="cred-verified-pill">● Completed Program</span>
+              <a href="https://www.linkedin.com/in/susatwik/" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View Infosys internship on LinkedIn">
+                <span>View Details</span>
+                <span class="btn-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 5: Generative AI & LLM Agent Architecture (Certifications) -->
+          <article class="cred-card cred-item card-glow-violet" data-category="certifications" id="cred-genai">
+            <div class="cred-card-header">
+              <div class="cred-card-icon ai-logo-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V11h3a4 4 0 0 1 4 4v1.5c1.2.7 2 2 2 3.5a4 4 0 0 1-8 0c0-1.5.8-2.8 2-3.5V15h-4v1.5c1.2.7 2 2 2 3.5a4 4 0 0 1-8 0c0-1.5.8-2.8 2-3.5V15H7a4 4 0 0 1-4-4v-1.5c-1.2-.7-2-2-2-3.5a4 4 0 0 1 8 0c0 1.5-.8 2.8-2 3.5V11h3V9.5C8.8 8.8 8 7.5 8 6a4 4 0 0 1 4-4z" fill="#A855F7"/>
+                </svg>
+              </div>
+              <div class="cred-card-tags">
+                <span class="cred-badge badge-cert">AGENTIC AI</span>
+                <span class="cred-year-tag">VERIFIED</span>
+              </div>
+            </div>
+
+            <h3 class="cred-card-title">Generative AI &amp; LLM Agent Architecture</h3>
+            <span class="cred-card-issuer">AI/ML Engineering &amp; Agent Frameworks</span>
+
+            <p class="cred-card-desc">
+              Demonstrated mastery in building stateful autonomous LLM agents, retrieval-augmented generation (RAG) pipelines, semantic vector stores, token management, and LangGraph multi-agent coordination.
+            </p>
+
+            <div class="cred-card-badges">
+              <span class="mini-tech-tag">LangChain</span>
+              <span class="mini-tech-tag">RAG</span>
+              <span class="mini-tech-tag">Vector DBs</span>
+            </div>
+
+            <div class="cred-card-bottom">
+              <span class="cred-verified-pill">● Production Agents</span>
+              <a href="https://github.com/susatwik/Zero-Waste-Recipes-Generator" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View AI agents on GitHub">
+                <span>View Implementation</span>
+                <span class="btn-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 6: Machine Learning & Deep Learning (Certifications) -->
+          <article class="cred-card cred-item card-glow-indigo" data-category="certifications" id="cred-ml-cv">
+            <div class="cred-card-header">
+              <div class="cred-card-icon pytorch-logo-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M13.2 2.4a7.8 7.8 0 0 0-4.6 1.5l1.6 1.6a5.5 5.5 0 0 1 3-1 5.7 5.7 0 1 1-5.7 5.7c0-1.1.3-2.1.8-3L6.8 5.6A7.8 7.8 0 1 0 13.2 2.4z" fill="#818CF8"/>
+                  <circle cx="16.5" cy="5.5" r="1.5" fill="#EE4C2C"/>
+                </svg>
+              </div>
+              <div class="cred-card-tags">
+                <span class="cred-badge badge-cert">DEEP LEARNING</span>
+                <span class="cred-year-tag">VERIFIED</span>
+              </div>
+            </div>
+
+            <h3 class="cred-card-title">Machine Learning &amp; Computer Vision</h3>
+            <span class="cred-card-issuer">Neural Networks &amp; Vision Pipelines</span>
+
+            <p class="cred-card-desc">
+              Practical expertise in convolutional neural network (CNN) architectures, PyTorch data loaders, OpenCV image augmentation, loss function tuning, and model evaluation metrics for computer vision tasks.
+            </p>
+
+            <div class="cred-card-badges">
+              <span class="mini-tech-tag">PyTorch</span>
+              <span class="mini-tech-tag">OpenCV</span>
+              <span class="mini-tech-tag">CNNs</span>
+            </div>
+
+            <div class="cred-card-bottom">
+              <span class="cred-verified-pill">● Vision Systems</span>
+              <a href="https://github.com/susatwik/pawdentify" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View Pawdentify CV model on GitHub">
+                <span>View CV Pipeline</span>
+                <span class="btn-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 7: Database Architecture & Advanced SQL (Certifications) -->
+          <article class="cred-card cred-item card-glow-teal" data-category="certifications" id="cred-db-sql">
+            <div class="cred-card-header">
+              <div class="cred-card-icon postgres-logo-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <ellipse cx="12" cy="6" rx="8" ry="3" fill="#336791" fill-opacity="0.3" stroke="#336791" stroke-width="1.5"/>
+                  <path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6" stroke="#336791" stroke-width="1.5"/>
+                  <path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6" stroke="#336791" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="cred-card-tags">
+                <span class="cred-badge badge-cert">DATABASE SYSTEMS</span>
+                <span class="cred-year-tag">VERIFIED</span>
+              </div>
+            </div>
+
+            <h3 class="cred-card-title">Database Architecture &amp; Advanced SQL</h3>
+            <span class="cred-card-issuer">Relational Modeling &amp; Query Optimization</span>
+
+            <p class="cred-card-desc">
+              Proficiency in relational schema design, 3NF normalization, ACID transaction isolation, complex analytical SQL queries, B-tree indexing strategies, and high-throughput Redis caching layers.
+            </p>
+
+            <div class="cred-card-badges">
+              <span class="mini-tech-tag">PostgreSQL</span>
+              <span class="mini-tech-tag">Redis</span>
+              <span class="mini-tech-tag">SQL</span>
+            </div>
+
+            <div class="cred-card-bottom">
+              <span class="cred-verified-pill">● ACID &amp; Caching</span>
+              <a href="https://github.com/susatwik/taskpilot-ai" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View PostgreSQL integration on GitHub">
+                <span>View DB Schema</span>
+                <span class="btn-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 8: Full-Stack Software Engineering (Certifications) -->
+          <article class="cred-card cred-item card-glow-blue" data-category="certifications" id="cred-fullstack">
+            <div class="cred-card-header">
+              <div class="cred-card-icon react-logo-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="2.2" fill="#61DAFB"/>
+                  <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.3"/>
+                  <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.3" transform="rotate(60 12 12)"/>
+                  <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.3" transform="rotate(120 12 12)"/>
+                </svg>
+              </div>
+              <div class="cred-card-tags">
+                <span class="cred-badge badge-cert">FULL-STACK</span>
+                <span class="cred-year-tag">VERIFIED</span>
+              </div>
+            </div>
+
+            <h3 class="cred-card-title">Full-Stack Application Engineering</h3>
+            <span class="cred-card-issuer">Modern Web Architectures &amp; Distributed APIs</span>
+
+            <p class="cred-card-desc">
+              End-to-end full-stack development with React, Node.js, Express, RESTful APIs, WebSockets for bidirectional streaming, JWT authentication, and containerized Docker environments.
+            </p>
+
+            <div class="cred-card-badges">
+              <span class="mini-tech-tag">React</span>
+              <span class="mini-tech-tag">Node.js</span>
+              <span class="mini-tech-tag">REST APIs</span>
+            </div>
+
+            <div class="cred-card-bottom">
+              <span class="cred-verified-pill">● Production Architectures</span>
+              <a href="https://github.com/susatwik/ecommerce-platform" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View full-stack platform on GitHub">
+                <span>View Architecture</span>
+                <span class="btn-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- 06 — CONTACT SECTION -->
+    <section class="contact section" id="contact">
+      <div class="section-head">
+        <span class="eyebrow">06 — CONTACT</span>
+        <span class="section-rule"></span>
+        <span class="section-aside">LET’S CONNECT</span>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left Column: Introduction & Direct Actions -->
+        <div class="contact-intro-col">
+          <div class="contact-badge">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>OPEN TO COLLABORATE · 2026</span>
+          </div>
+
+          <h2 class="contact-headline">
+            Let’s build<br />
+            <em>something meaningful.</em>
+          </h2>
+
+          <p class="contact-desc">
+            I’m open to software engineering opportunities, internships, full-stack development, AI/ML projects, hackathons, and meaningful technical collaborations. Have an opportunity, a project idea, or something interesting to discuss? Let’s connect.
+          </p>
+
+          <!-- Direct Channels: Row 1 Social Buttons + Row 2 Full-Width Email Button -->
+          <div class="contact-actions-group">
+            <div class="contact-social-row">
+              <a href="https://www.linkedin.com/in/susatwik/" class="social-btn btn-linkedin" data-platform="linkedin" target="_blank" rel="noopener noreferrer" aria-label="Visit Susatwik's LinkedIn profile">
+                <svg class="action-icon linkedin-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                <span>LinkedIn</span>
+                <span class="btn-arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <a href="https://wa.me/919390174748?text=Hi%20Susatwik%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity%20or%20collaboration." class="social-btn btn-whatsapp" data-platform="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Susatwik at +91 93901 74748">
+                <svg class="action-icon whatsapp-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                <span>WhatsApp</span>
+                <span class="btn-arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <a href="https://github.com/susatwik" class="social-btn btn-github" data-platform="github" target="_blank" rel="noopener noreferrer" aria-label="Visit Susatwik's GitHub profile">
+                <svg class="action-icon github-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>GitHub</span>
+                <span class="btn-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <!-- Row 2: Full-Width Email Button -->
+            <a href="mailto:sathwvikmanuri@gmail.com" class="contact-email-btn" aria-label="Email Susatwik directly at sathwvikmanuri@gmail.com">
+              <div class="email-btn-main">
+                <div class="email-btn-icon-wrap" aria-hidden="true">
+                  <svg class="email-btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                </div>
+                <div class="email-btn-text">
+                  <span class="email-btn-label">EMAIL ME</span>
+                  <span class="email-btn-address">sathwvikmanuri@gmail.com</span>
+                </div>
+              </div>
+              <span class="email-btn-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Compact Functional Contact Form Card -->
+        <div class="contact-form-col">
+          <div class="contact-form-card">
+            <div class="form-header">
+              <h3>Send a message</h3>
+              <p>Direct communication to my inbox. I typically respond within 24–48 hours.</p>
+            </div>
+
+            <form class="contact-form" id="contact-form" novalidate>
+              <!-- Bot Honeypot field (hidden from real users) -->
+              <div class="form-group-bot" aria-hidden="true">
+                <label for="contact-bot-trap">Please leave this field empty</label>
+                <input type="text" name="_gotcha" id="contact-bot-trap" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <!-- Row 1: Name and Email side by side -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Full name <span class="req">*</span></label>
+                  <input type="text" id="contact-name" name="name" required autocomplete="name" placeholder="Alex Morgan" maxlength="100" />
+                  <span class="field-error" id="name-error" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email">Email address <span class="req">*</span></label>
+                  <input type="email" id="contact-email" name="email" required autocomplete="email" placeholder="alex@company.com" maxlength="100" />
+                  <span class="field-error" id="email-error" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <!-- Row 2: Custom Accessible Dropdown and Subject side by side -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="custom-select-trigger" id="reason-label">Reason for contacting <span class="req">*</span></label>
+                  <div class="custom-select" id="custom-reason-select">
+                    <button type="button" class="custom-select-trigger" id="custom-select-trigger" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="reason-label custom-select-trigger">
+                      <span class="custom-select-label" id="custom-select-label">Select an inquiry type</span>
+                      <svg class="custom-select-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </button>
+                    <ul class="custom-select-options" id="custom-select-options" role="listbox" tabindex="-1" aria-labelledby="reason-label" hidden>
+                      <li class="custom-select-option" role="option" aria-selected="false" data-value="Job opportunity" tabindex="-1">Job opportunity</li>
+                      <li class="custom-select-option" role="option" aria-selected="false" data-value="Internship opportunity" tabindex="-1">Internship opportunity</li>
+                      <li class="custom-select-option" role="option" aria-selected="false" data-value="Freelance project" tabindex="-1">Freelance project</li>
+                      <li class="custom-select-option" role="option" aria-selected="false" data-value="Full-stack development" tabindex="-1">Full-stack development</li>
+                      <li class="custom-select-option" role="option" aria-selected="false" data-value="AI/ML collaboration" tabindex="-1">AI/ML collaboration</li>
+                      <li class="custom-select-option" role="option" aria-selected="false" data-value="Hackathon or community collaboration" tabindex="-1">Hackathon or community collaboration</li>
+                      <li class="custom-select-option" role="option" aria-selected="false" data-value="Technical discussion" tabindex="-1">Technical discussion</li>
+                      <li class="custom-select-option" role="option" aria-selected="false" data-value="Other" tabindex="-1">Other</li>
+                    </ul>
+                    <!-- Synchronized select for form serialization, accessibility fallback, and test suite -->
+                    <select id="contact-reason" name="reason" class="sr-only-select" tabindex="-1" aria-hidden="true" required>
+                      <option value="" disabled selected>Select an inquiry type</option>
+                      <option value="Job opportunity">Job opportunity</option>
+                      <option value="Internship opportunity">Internship opportunity</option>
+                      <option value="Freelance project">Freelance project</option>
+                      <option value="Full-stack development">Full-stack development</option>
+                      <option value="AI/ML collaboration">AI/ML collaboration</option>
+                      <option value="Technical discussion">Technical discussion</option>
+                      <option value="Hackathon or community collaboration">Hackathon or community collaboration</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <span class="field-error" id="reason-error" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-subject">Subject <span class="req">*</span></label>
+                  <input type="text" id="contact-subject" name="subject" required placeholder="What would you like to discuss?" maxlength="150" />
+                  <span class="field-error" id="subject-error" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <!-- Row 3: Message field full width -->
+              <div class="form-group">
+                <div class="message-meta-header">
+                  <label for="contact-message">Message <span class="req">*</span></label>
+                  <span class="char-count" id="char-count">0 / 2000</span>
+                </div>
+                <textarea id="contact-message" name="message" required rows="3" minlength="20" maxlength="2000" placeholder="Tell me a little about your inquiry, project, or opportunity..."></textarea>
+                <span class="field-error" id="message-error" aria-live="polite"></span>
+              </div>
+
+              <!-- Row 4: Optional Portfolio/Company URL full width -->
+              <div class="form-group">
+                <label for="contact-url">Portfolio or company URL <span class="opt">(optional)</span></label>
+                <input type="url" id="contact-url" name="url" placeholder="https://example.com" maxlength="200" />
+                <span class="field-error" id="url-error" aria-live="polite"></span>
+              </div>
+
+              <!-- Privacy Notice directly above submit button -->
+              <p class="form-consent">
+                Your information is used solely to respond to your inquiry and is never shared.
+              </p>
+
+              <!-- Status Banner -->
+              <div class="form-status" id="form-status" role="alert" aria-live="assertive" hidden></div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="submit-btn" id="contact-submit-btn">
+                <span class="btn-text">Send Message <span>↗</span></span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success Celebration Modal -->
+      <div class="contact-modal-backdrop" id="contact-success-modal" role="dialog" aria-modal="true" aria-labelledby="modal-success-title" aria-describedby="modal-success-desc" hidden>
+        <div class="contact-modal-card" id="form-success-card">
+          <button type="button" class="modal-close-icon" id="modal-close-icon" aria-label="Close modal">✕</button>
+          <div class="modal-success-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h3 id="modal-success-title" class="modal-title">Thank You for Reaching Out!</h3>
+          <p id="modal-success-desc" class="modal-message">
+            Your message has been submitted successfully. Thank you for taking the time to connect with me. I appreciate your interest and will review your message and get back to you as soon as possible.
+          </p>
+          <div class="modal-note">
+            <span class="modal-note-icon" aria-hidden="true">⏱</span>
+            <span>I aim to respond within 24–48 working hours.</span>
+          </div>
+          <p class="modal-closing">Looking forward to connecting with you.</p>
+          <button type="button" class="modal-btn-close" id="modal-btn-close">CLOSE</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <a class="footer-brand" href="#top">SUSATWIK MANURI</a>
+        <p class="footer-role">Full-Stack Developer · AI/ML Enthusiast</p>
+        <p class="footer-sub">Final-year Computer Science and Engineering student building dependable platforms and intelligent software.</p>
+      </div>
+
+      <div class="footer-links-col">
+        <span class="footer-col-title">NAVIGATION</span>
+        <nav aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#journey">Journey</a>
+          <a href="#work">Work</a>
+          <a href="#credentials">Leadership</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-links-col">
+        <span class="footer-col-title">CONNECT</span>
+        <nav aria-label="Social and direct channels">
+          <a href="mailto:sathwvikmanuri@gmail.com" class="footer-email-link" aria-label="Email Susatwik at sathwvikmanuri@gmail.com">
+            <svg class="footer-social-icon email-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            <span class="footer-link-text">Email</span>
+            <span class="footer-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://wa.me/919390174748?text=Hi%20Susatwik%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity%20or%20collaboration." class="footer-social-link footer-whatsapp" data-platform="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Susatwik at +91 93901 74748">
+            <svg class="footer-social-icon whatsapp-icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            <span class="footer-link-text">WhatsApp</span>
+            <span class="footer-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.linkedin.com/in/susatwik/" class="footer-social-link footer-linkedin" data-platform="linkedin" target="_blank" rel="noopener noreferrer" aria-label="Visit Susatwik's LinkedIn profile">
+            <svg class="footer-social-icon linkedin-icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            <span class="footer-link-text">LinkedIn</span>
+            <span class="footer-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://github.com/susatwik/" class="footer-social-link footer-github" data-platform="github" target="_blank" rel="noopener noreferrer" aria-label="Visit Susatwik's GitHub profile">
+            <svg class="footer-social-icon github-icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span class="footer-link-text">GitHub</span>
+            <span class="footer-arrow" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="footer-meta-col">
+        <span class="footer-col-title">LOCATION &amp; STATUS</span>
+        <p class="footer-meta-text">India · IST (UTC+5:30)</p>
+        <span class="footer-status-pill"><span class="pill-dot"></span> Open to select opportunities</span>
+        <a class="footer-top-btn" href="#top">BACK TO TOP <span>↑</span></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <small>© <span id="current-year">2026</span> Susatwik Manuri. All rights reserved.</small>
+      <span class="footer-build-tag">SUSATWIK-PORTFOLIO · VERCEL DEPLOYED</span>
+    </div>
+  </footer>
+</body>
+</html>
