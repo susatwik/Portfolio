@@ -60,23 +60,33 @@
   function fitPortfolioHeading() {
     if (!heroTitle) return 0;
     const isMobile = window.innerWidth <= 768;
-    // Target 90% hero content width with safe balanced side margins
-    const targetWidth = isMobile
-      ? window.innerWidth * 0.90
-      : Math.min(window.innerWidth * 0.91, 1380);
+    const isSmallMobile = window.innerWidth <= 480;
+    // Target 84–88% hero content width with safe side margins to guarantee zero edge clipping
+    const targetWidth = isSmallMobile
+      ? window.innerWidth * 0.84
+      : (isMobile ? window.innerWidth * 0.86 : Math.min(window.innerWidth * 0.88, 1300));
 
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     let computedSize = 0;
     if (ctx) {
       ctx.font = '900 100px "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
-      const chars = [...PORTFOLIO_TEXT];
       const tracking = 100 * -0.045;
-      const totalW = chars.reduce((sum, ch) => sum + ctx.measureText(ch).width, 0) + tracking * (chars.length - 1);
+      const chars = [...PORTFOLIO_TEXT];
+      const advanceW = chars.reduce((sum, ch) => sum + ctx.measureText(ch).width, 0) + tracking * (chars.length - 1);
+      // Measure actual text bounding metrics to protect rightmost curvature of the final "O"
+      const textMetrics = ctx.measureText(PORTFOLIO_TEXT);
+      const rightOverhang = (textMetrics.actualBoundingBoxRight && textMetrics.actualBoundingBoxRight > advanceW)
+        ? (textMetrics.actualBoundingBoxRight - advanceW)
+        : 4;
+      const totalW = advanceW + rightOverhang;
+
       if (totalW > 0) {
         const idealSize = (targetWidth / totalW) * 100;
-        const minClamp = isMobile ? 42 : 56;
-        const maxClamp = isMobile ? 96 : 220;
+        const minClamp = isSmallMobile ? 28 : (isMobile ? 38 : 52);
+        const maxClamp = isSmallMobile
+          ? Math.min(52, window.innerWidth * 0.14)
+          : (isMobile ? 92 : 210);
         computedSize = Math.max(minClamp, Math.min(maxClamp, idealSize));
         heroTitle.style.setProperty('--portfolio-size', `${computedSize.toFixed(1)}px`);
       }
@@ -116,6 +126,12 @@
 
       if (reduceMotion) {
         this.finishIntro();
+        if (isDeepLink) {
+          requestAnimationFrame(() => {
+            const target = document.querySelector(hash);
+            target?.scrollIntoView({ behavior: 'auto' });
+          });
+        }
         this.prepareBackgroundParticles();
         return;
       }
@@ -408,7 +424,9 @@
       const namePoints = this.sampleText(NAME_TEXT, nameFontSize, 0.12, width, height, nameCenterY);
 
       const measuredTitleSize = fitPortfolioHeading();
-      const titleFontSize = measuredTitleSize || (isMobile ? Math.min(width * 0.155, 88) : Math.min(width * 0.135, 185));
+      const titleFontSize = isMobile
+        ? Math.min(measuredTitleSize || 50, width * 0.132, 50)
+        : (measuredTitleSize || Math.min(width * 0.135, 185));
       const titleCenterY = height * 0.48;
       const titlePoints = this.sampleText(PORTFOLIO_TEXT, titleFontSize, -0.045, width, height, titleCenterY);
 
@@ -871,13 +889,33 @@
       this.nodes = [];
       this.revealProgress = 0;
       this.animId = null;
+      this.isVisible = false;
       this.init();
+      this.setupObserver();
     }
 
     init() {
       this.resize();
       this.createNodes();
-      this.startLoop();
+    }
+
+    setupObserver() {
+      if (typeof IntersectionObserver !== 'undefined') {
+        this.observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            this.isVisible = entry.isIntersecting;
+            if (this.isVisible) {
+              this.startLoop();
+            } else {
+              this.stopLoop();
+            }
+          });
+        }, { threshold: 0.05 });
+        this.observer.observe(this.canvas);
+      } else {
+        this.isVisible = true;
+        this.startLoop();
+      }
     }
 
     resize() {
@@ -911,14 +949,24 @@
     }
 
     startLoop() {
+      if (this.animId || !this.isVisible) return;
       const render = () => {
-        if (!document.hidden && !reduceMotion) {
+        if (!document.hidden && !reduceMotion && this.isVisible) {
           this.update();
           this.draw();
+          this.animId = requestAnimationFrame(render);
+        } else {
+          this.animId = null;
         }
-        this.animId = requestAnimationFrame(render);
       };
       this.animId = requestAnimationFrame(render);
+    }
+
+    stopLoop() {
+      if (this.animId) {
+        cancelAnimationFrame(this.animId);
+        this.animId = null;
+      }
     }
 
     update() {
@@ -993,13 +1041,33 @@
       this.ctx = canvas.getContext('2d');
       this.particles = [];
       this.animId = null;
+      this.isVisible = false;
       this.init();
+      this.setupObserver();
     }
 
     init() {
       this.resize();
       this.createParticles();
-      this.startLoop();
+    }
+
+    setupObserver() {
+      if (typeof IntersectionObserver !== 'undefined') {
+        this.observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            this.isVisible = entry.isIntersecting;
+            if (this.isVisible) {
+              this.startLoop();
+            } else {
+              this.stopLoop();
+            }
+          });
+        }, { threshold: 0.05 });
+        this.observer.observe(this.canvas);
+      } else {
+        this.isVisible = true;
+        this.startLoop();
+      }
     }
 
     resize() {
@@ -1029,14 +1097,24 @@
     }
 
     startLoop() {
+      if (this.animId || !this.isVisible) return;
       const render = () => {
-        if (!document.hidden && !reduceMotion) {
+        if (!document.hidden && !reduceMotion && this.isVisible) {
           this.update();
           this.draw();
+          this.animId = requestAnimationFrame(render);
+        } else {
+          this.animId = null;
         }
-        this.animId = requestAnimationFrame(render);
       };
       this.animId = requestAnimationFrame(render);
+    }
+
+    stopLoop() {
+      if (this.animId) {
+        cancelAnimationFrame(this.animId);
+        this.animId = null;
+      }
     }
 
     update() {
@@ -1126,11 +1204,11 @@
       }
     }
 
-    // Phase 4: Bottom Statistics Panel (Reveals ONLY after final milestone is complete: 0.88 to 0.98)
+    // Phase 4: Bottom Statistics Panel (Reveals smoothly from 0.82 to 0.94 as final card settles)
     if (journeyStats) {
-      const statsP = clamp01((p - 0.88) / 0.10);
+      const statsP = clamp01((p - 0.82) / 0.12);
       journeyStats.style.opacity = statsP.toFixed(3);
-      journeyStats.style.transform = `translateY(${((1 - statsP) * 18).toFixed(1)}px)`;
+      journeyStats.style.transform = `translateY(${((1 - statsP) * 8).toFixed(1)}px)`;
     }
   }
 
@@ -1305,6 +1383,9 @@
   function init() {
     // Initial typography measurement & safe responsive fitting
     fitPortfolioHeading();
+    if (document.fonts?.ready) {
+      document.fonts.ready.then(() => fitPortfolioHeading());
+    }
 
     // Skip intro button & Escape key handling
     skipButton?.addEventListener('click', () => {
@@ -1503,6 +1584,9 @@
     setupProjectsNavigation();
     setupCredentialFilters();
 
+    // Initialize Digital ID Badge 3D Tilt Parallax
+    setupBadgeTilt();
+
     // Initialize Contact Form & Footer
     setupContactForm();
 
@@ -1510,6 +1594,59 @@
     if (portraitCanvas && portraitFallback) {
       portraitSystem = new PortraitParticleSystem(portraitCanvas, portraitFallback);
     }
+  }
+
+  // ==========================================================================
+  // DIGITAL ID BADGE 3D PARALLAX CONTROLLER
+  // ==========================================================================
+  function setupBadgeTilt() {
+    const badgeScene = document.getElementById('about-badge-scene');
+    const badgeCard = document.getElementById('id-badge-card');
+    if (!badgeScene || !badgeCard) return;
+
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    let isHovering = false;
+    let animId = null;
+
+    function renderTilt() {
+      currentX += (targetX - currentX) * 0.12;
+      currentY += (targetY - currentY) * 0.12;
+      badgeCard.style.setProperty('--badge-tilt-x', `${currentX.toFixed(2)}deg`);
+      badgeCard.style.setProperty('--badge-tilt-y', `${currentY.toFixed(2)}deg`);
+
+      if (isHovering || Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05) {
+        animId = requestAnimationFrame(renderTilt);
+      } else {
+        badgeCard.style.setProperty('--badge-tilt-x', '0deg');
+        badgeCard.style.setProperty('--badge-tilt-y', '0deg');
+        animId = null;
+      }
+    }
+
+    badgeScene.addEventListener('pointermove', e => {
+      if (reduceMotion || window.innerWidth < 768) return;
+      const rect = badgeScene.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      targetX = -y * 8;
+      targetY = x * 8;
+      isHovering = true;
+      if (!animId) {
+        animId = requestAnimationFrame(renderTilt);
+      }
+    }, { passive: true });
+
+    badgeScene.addEventListener('pointerleave', () => {
+      targetX = 0;
+      targetY = 0;
+      isHovering = false;
+      if (!animId) {
+        animId = requestAnimationFrame(renderTilt);
+      }
+    }, { passive: true });
   }
 
   // ==========================================================================

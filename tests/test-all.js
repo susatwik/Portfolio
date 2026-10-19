@@ -1219,6 +1219,42 @@ async function runAll() {
   delete process.env.SMTP_USER;
   delete process.env.SMTP_PASS;
 
+  // 12. Visual Refinements Verification Suite
+  console.log('\n--- VISUAL REFINEMENTS: JOURNEY STATS, HERO TITLE, & FOOTER FX ---');
+  test('Journey statistics data items are configured with horizontal row alignment and baseline alignment',
+    css.includes('.journey-stat-data') &&
+    css.includes('flex-direction: row') &&
+    css.includes('align-items: baseline'));
+
+  test('Journey statistics retain all four verified metrics and clean typography',
+    html.includes('3+') && html.includes('Years of Learning') &&
+    html.includes('2') && html.includes('Internships') &&
+    html.includes('10+') && html.includes('Projects Built') &&
+    html.includes('∞') && html.includes('More to Explore'));
+
+  test('Hero PORTFOLIO typography includes horizontal padding and unclipped overflow bounds',
+    css.includes('.hero-portfolio-word') &&
+    css.includes('padding: 0 clamp(10px, 1.5vw, 24px)') &&
+    css.includes('box-sizing: border-box') &&
+    css.includes('overflow: visible'));
+
+  test('Hero fitPortfolioHeading algorithm computes right overhang buffer for letter "O"',
+    js.includes('rightOverhang') &&
+    js.includes('totalW = advanceW + rightOverhang'));
+
+  test('Footer includes authentic cinematic ambient backdrop with glowing orbs and sparkles',
+    html.includes('class="footer-ambient-backdrop"') &&
+    html.includes('footer-glow-orb') &&
+    html.includes('footer-sparkle-field') &&
+    css.includes('.footer-ambient-backdrop') &&
+    css.includes('.footer-glow-orb') &&
+    css.includes('@keyframes footerSparkleFloat') &&
+    css.includes('@keyframes footerGlowPulse'));
+
+  test('Footer ambient glow and sparkles respect reduced motion preferences',
+    css.includes('.footer-glow-orb,\n  .footer-sparkle') &&
+    css.includes('animation: none !important'));
+
   console.log(`\n========================================`);
   console.log(`FINAL TEST REPORT: ${passed} / ${total} TESTS PASSED`);
   console.log(`========================================\n`);

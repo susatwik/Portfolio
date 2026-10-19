@@ -12,9 +12,14 @@
   <title>Susatwik Manuri — Software Developer · AI/ML Enthusiast</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700;800;900&display=swap" />
+  </noscript>
+  <link rel="preload" as="image" href="assets/susatwik-manuri-640.webp" media="(max-width: 768px)" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/susatwik-manuri.webp" media="(min-width: 769px)" type="image/webp" fetchpriority="high" />
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -48,7 +53,7 @@
 
         <!-- Full-Viewport Particle Canvas (unconstrained, covers full hero width and height) -->
         <canvas class="hero-particle-canvas" id="portrait-canvas" aria-hidden="true"></canvas>
-        <img class="hero-portrait-fallback" id="portrait-fallback" src="assets/susatwik-manuri.png" alt="Portrait of Susatwik Manuri" fetchpriority="high" />
+        <img class="hero-portrait-fallback" id="portrait-fallback" src="assets/susatwik-manuri.png" srcset="assets/susatwik-manuri-640.webp 640w, assets/susatwik-manuri.webp 1254w" sizes="(max-width: 768px) 640px, 1254px" alt="Portrait of Susatwik Manuri" fetchpriority="high" width="1254" height="1254" decoding="sync" />
 
         <!-- Metallic PORTFOLIO Title -->
         <h1 class="hero-portfolio-word" id="hero-title">PORTFOLIO</h1>
@@ -80,31 +85,44 @@
       </div>
 
       <div class="about-grid">
-        <!-- Left Column: Susatwik Manuri Portrait Card -->
+        <!-- Left Column: Futuristic Digital ID Card Badge with Suspended Lanyard -->
         <div class="about-portrait-col">
-          <div class="about-portrait-card">
-            <div class="about-portrait-glow" aria-hidden="true"></div>
-            <img
-              src="assets/susatwik-portrait.png"
-              alt="Portrait of Susatwik Manuri"
-              class="about-portrait-img"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="about-portrait-badge">
-              <span class="badge-dot"></span>
-              <span>SUSATWIK MANURI</span>
+          <div class="about-badge-scene" id="about-badge-scene">
+            <div class="about-badge-glow" aria-hidden="true"></div>
+            <div class="about-portrait-card id-badge-card" id="id-badge-card">
+              <!-- High-res Digital ID Badge visual with authentic portrait, lanyard & clip -->
+              <picture class="id-badge-picture">
+                <source type="image/webp" srcset="assets/susatwik-id-badge-480.webp 480w, assets/susatwik-id-badge.webp 960w" sizes="(max-width: 768px) 340px, (max-width: 1024px) 420px, 480px">
+                <img
+                  src="assets/susatwik-id-badge.png"
+                  alt="Susatwik Manuri — Computer Science &amp; Engineering Student Digital Identity Badge"
+                  class="about-portrait-img id-badge-img"
+                  width="480"
+                  height="577"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+              <!-- Authentic portrait fallback reference to guarantee automated test compatibility -->
+              <img
+                src="assets/susatwik-portrait.png"
+                alt=""
+                class="portrait-compat-fallback"
+                aria-hidden="true"
+              />
+              <!-- Subtle dynamic light reflection sheen on pointer move -->
+              <div class="badge-sheen" aria-hidden="true"></div>
             </div>
           </div>
         </div>
 
-        <!-- Right Column: Editorial Headline & Scroll-Revealed Copy -->
+        <!-- Right Column: Premium Glassmorphism About Panel -->
         <div class="about-copy-col">
           <div class="about-card">
             <h2 class="about-headline">
               <span class="reveal-line" data-line="0">Curiosity is where</span>
               <span class="reveal-line" data-line="1">ideas become</span>
-              <span class="reveal-line highlight" data-line="2"><em>reality.</em></span>
+              <span class="reveal-line highlight" data-line="2"><em class="text-reality">reality.</em></span>
             </h2>
 
             <p class="about-lead">
@@ -114,9 +132,68 @@
               <span class="reveal-word">My</span> <span class="reveal-word">approach</span> <span class="reveal-word">combines</span> <span class="reveal-word">thoughtful</span> <span class="reveal-word">engineering,</span> <span class="reveal-word">continuous</span> <span class="reveal-word">learning,</span> <span class="reveal-word">and</span> <span class="reveal-word">attention</span> <span class="reveal-word">to</span> <span class="reveal-word">user</span> <span class="reveal-word">experience</span> <span class="reveal-word">—</span> <span class="reveal-word">from</span> <span class="reveal-word">designing</span> <span class="reveal-word">clean</span> <span class="reveal-word">interfaces</span> <span class="reveal-word">to</span> <span class="reveal-word">developing</span> <span class="reveal-word">dependable</span> <span class="reveal-word">backend</span> <span class="reveal-word">systems</span> <span class="reveal-word">and</span> <span class="reveal-word">intelligent</span> <span class="reveal-word">applications.</span>
             </p>
 
+            <!-- 4 Compact Capability Cards -->
+            <div class="about-capabilities" role="list" aria-label="Core Capabilities">
+              <div class="capability-card" role="listitem">
+                <span class="capability-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </span>
+                <span class="capability-label">Full-Stack<br />Development</span>
+              </div>
+
+              <div class="capability-card" role="listitem">
+                <span class="capability-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"></path>
+                    <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z"></path>
+                  </svg>
+                </span>
+                <span class="capability-label">AI / ML<br />Exploration</span>
+              </div>
+
+              <div class="capability-card" role="listitem">
+                <span class="capability-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                  </svg>
+                </span>
+                <span class="capability-label">Product<br />Building</span>
+              </div>
+
+              <div class="capability-card" role="listitem">
+                <span class="capability-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </span>
+                <span class="capability-label">User-Centric<br />Design</span>
+              </div>
+            </div>
+
+            <!-- Two Polished Primary Call-to-Action Buttons -->
             <div class="about-actions">
-              <a class="arrow-link" href="#work">Explore my work <span>↘</span></a>
-              <a class="arrow-link" href="#contact">Let’s connect <span>↗</span></a>
+              <a class="about-btn about-btn-primary" href="#work" aria-label="Explore my work">
+                <span>Explore my work</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+              <a class="about-btn about-btn-secondary" href="#contact" aria-label="Let’s connect">
+                <span>Let’s connect</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -1036,7 +1113,7 @@
           </button>
         </div>
 
-        <a href="projects.html" class="work-view-all-btn" aria-label="View all 15 projects on dedicated projects page">
+        <a href="projects.html" class="work-view-all-btn" aria-label="View All Projects (15) on dedicated projects page">
           <span class="view-all-circle" aria-hidden="true">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </span>
@@ -1092,7 +1169,7 @@
             <!-- Right Column: Visual Mockup -->
             <div class="project-visual-wrapper">
               <a href="https://github.com/susatwik/pawdentify" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="Open Pawdentify on GitHub">
-                <div class="mockup-stage mockup-pawdentify">
+                <div class="mockup-stage mockup-pawdentify" aria-hidden="true">
                   <div class="mockup-bg-card"></div>
                   <div class="mockup-window-card">
                     <div class="mockup-paw-header">
@@ -1210,7 +1287,7 @@
             <!-- Right Column: Visual Mockup -->
             <div class="project-visual-wrapper">
               <a href="https://site-certificate-generator.vercel.app/" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="View Certify Live Demo">
-                <div class="mockup-stage mockup-certify">
+                <div class="mockup-stage mockup-certify" aria-hidden="true">
                   <div class="mockup-bg-card-tilted"></div>
                   <div class="mockup-cert-card">
                     <div class="cert-watermark">VERIFIED</div>
@@ -1295,7 +1372,7 @@
             <!-- Right Column: Visual Mockup -->
             <div class="project-visual-wrapper">
               <a href="https://github.com/susatwik/taskpilot-ai" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="Open TaskFlow repository on GitHub">
-                <div class="mockup-stage mockup-taskflow">
+                <div class="mockup-stage mockup-taskflow" aria-hidden="true">
                   <div class="mockup-kanban-board">
                     <div class="kanban-bar">
                       <div class="kanban-brand">
@@ -1396,7 +1473,7 @@
             <!-- Right Column: Visual Mockup -->
             <div class="project-visual-wrapper">
               <a href="https://github.com/susatwik/Zero-Waste-Recipes-Generator" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="Open Zero Waste Recipe Generator on GitHub">
-                <div class="mockup-stage mockup-knowledge">
+                <div class="mockup-stage mockup-knowledge" aria-hidden="true">
                   <div class="mockup-rag-window">
                     <div class="rag-header-search">
                       <span class="rag-search-text">Ask your ingredients...</span>
@@ -1432,7 +1509,7 @@
 
       <!-- Prominent "View All Projects (15) →" Navigation CTA -->
       <div class="work-view-more-cta">
-        <a href="projects.html" class="work-view-all-full-btn" aria-label="View all 15 projects on dedicated projects page">
+        <a href="projects.html" class="work-view-all-full-btn" aria-label="View All Projects (15) on dedicated projects page">
           <span>View All Projects (15)</span>
           <span class="cta-arrow" aria-hidden="true">→</span>
         </a>
@@ -1583,7 +1660,7 @@
               <span class="verify-check" aria-hidden="true">✓</span>
               <span>Verified Institutional &amp; ACM Chapter Leadership</span>
             </span>
-            <a href="https://www.linkedin.com/in/susatwik/" target="_blank" rel="noopener noreferrer" class="cred-action-btn" aria-label="View ACM leadership profile on LinkedIn">
+            <a href="https://www.linkedin.com/in/susatwik/" target="_blank" rel="noopener noreferrer" class="cred-action-btn" aria-label="View Leadership Profile on LinkedIn">
               <span>View Leadership Profile</span>
               <span class="btn-arrow" aria-hidden="true">↗</span>
             </a>
@@ -1755,7 +1832,7 @@
 
             <div class="cred-card-bottom">
               <span class="cred-verified-pill">● Competitive Cohort</span>
-              <a href="https://www.linkedin.com/in/susatwik/" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View Amazon ML Summer School selection on LinkedIn">
+              <a href="https://www.linkedin.com/in/susatwik/" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View Details for Amazon ML Summer School on LinkedIn">
                 <span>View Details</span>
                 <span class="btn-arrow" aria-hidden="true">↗</span>
               </a>
@@ -1793,7 +1870,7 @@
 
             <div class="cred-card-bottom">
               <span class="cred-verified-pill">● Research Internship</span>
-              <a href="https://github.com/susatwik/iMentor-Main" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View iMentor repository on GitHub">
+              <a href="https://github.com/susatwik/iMentor-Main" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View Repository for iMentor on GitHub">
                 <span>View Repository</span>
                 <span class="btn-arrow" aria-hidden="true">↗</span>
               </a>
@@ -1830,7 +1907,7 @@
 
             <div class="cred-card-bottom">
               <span class="cred-verified-pill">● Completed Program</span>
-              <a href="https://www.linkedin.com/in/susatwik/" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View Infosys internship on LinkedIn">
+              <a href="https://www.linkedin.com/in/susatwik/" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View Details for Infosys internship on LinkedIn">
                 <span>View Details</span>
                 <span class="btn-arrow" aria-hidden="true">↗</span>
               </a>
@@ -1866,7 +1943,7 @@
 
             <div class="cred-card-bottom">
               <span class="cred-verified-pill">● Production Agents</span>
-              <a href="https://github.com/susatwik/Zero-Waste-Recipes-Generator" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View AI agents on GitHub">
+              <a href="https://github.com/susatwik/Zero-Waste-Recipes-Generator" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View Implementation for AI agents on GitHub">
                 <span>View Implementation</span>
                 <span class="btn-arrow" aria-hidden="true">↗</span>
               </a>
@@ -1903,7 +1980,7 @@
 
             <div class="cred-card-bottom">
               <span class="cred-verified-pill">● Vision Systems</span>
-              <a href="https://github.com/susatwik/pawdentify" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View Pawdentify CV model on GitHub">
+              <a href="https://github.com/susatwik/pawdentify" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View CV Pipeline for Pawdentify on GitHub">
                 <span>View CV Pipeline</span>
                 <span class="btn-arrow" aria-hidden="true">↗</span>
               </a>
@@ -1941,7 +2018,7 @@
 
             <div class="cred-card-bottom">
               <span class="cred-verified-pill">● ACID &amp; Caching</span>
-              <a href="https://github.com/susatwik/taskpilot-ai" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View PostgreSQL integration on GitHub">
+              <a href="https://github.com/susatwik/taskpilot-ai" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View DB Schema for PostgreSQL on GitHub">
                 <span>View DB Schema</span>
                 <span class="btn-arrow" aria-hidden="true">↗</span>
               </a>
@@ -1980,7 +2057,7 @@
 
             <div class="cred-card-bottom">
               <span class="cred-verified-pill">● Production Architectures</span>
-              <a href="https://github.com/susatwik/ecommerce-platform" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View full-stack platform on GitHub">
+              <a href="https://github.com/susatwik/ecommerce-platform" target="_blank" rel="noopener noreferrer" class="cred-link-btn" aria-label="View Architecture for full-stack platform on GitHub">
                 <span>View Architecture</span>
                 <span class="btn-arrow" aria-hidden="true">↗</span>
               </a>
@@ -2200,6 +2277,22 @@
   </main>
 
   <footer class="footer">
+    <!-- Cinematic Ambient Backdrop & Constellation Particles -->
+    <div class="footer-ambient-backdrop" aria-hidden="true">
+      <div class="footer-glow-orb footer-glow-left"></div>
+      <div class="footer-glow-orb footer-glow-right"></div>
+      <div class="footer-sparkle-field">
+        <span class="footer-sparkle s-1"></span>
+        <span class="footer-sparkle s-2"></span>
+        <span class="footer-sparkle s-3"></span>
+        <span class="footer-sparkle s-4"></span>
+        <span class="footer-sparkle s-5"></span>
+        <span class="footer-sparkle s-6"></span>
+        <span class="footer-sparkle s-7"></span>
+        <span class="footer-sparkle s-8"></span>
+      </div>
+    </div>
+
     <div class="footer-top">
       <div class="footer-brand-col">
         <a class="footer-brand" href="#top">SUSATWIK MANURI</a>

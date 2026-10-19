@@ -12,7 +12,11 @@
   <title>All Projects — Susatwik Manuri · Software Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700;800;900&display=swap" />
+  </noscript>
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
@@ -146,7 +150,7 @@
             <!-- Right Column: Visual Mockup -->
             <div class="project-visual-wrapper">
               <a href="https://github.com/susatwik/pawdentify" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="Open Pawdentify on GitHub">
-                <div class="mockup-stage mockup-pawdentify">
+                <div aria-hidden="true" class="mockup-stage mockup-pawdentify">
                   <div class="mockup-bg-card"></div>
                   <div class="mockup-window-card">
                     <div class="mockup-paw-header">
@@ -255,7 +259,7 @@
             <!-- Right Column: Visual Mockup -->
             <div class="project-visual-wrapper">
               <a href="https://site-certificate-generator.vercel.app/" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="View Certify Live Demo">
-                <div class="mockup-stage mockup-certify">
+                <div aria-hidden="true" class="mockup-stage mockup-certify">
                   <div class="mockup-certificate-card">
                     <div class="cert-pattern-border"></div>
                     <div class="cert-gold-ribbon">
@@ -346,7 +350,7 @@
             <!-- Right Column: Visual Mockup -->
             <div class="project-visual-wrapper">
               <a href="https://github.com/susatwik/taskpilot-ai" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="Open TaskFlow repository on GitHub">
-                <div class="mockup-stage mockup-taskflow">
+                <div aria-hidden="true" class="mockup-stage mockup-taskflow">
                   <div class="mockup-kanban-board">
                     <div class="kanban-bar">
                       <div class="kanban-brand">
@@ -447,7 +451,7 @@
             <!-- Right Column: Visual Mockup -->
             <div class="project-visual-wrapper">
               <a href="https://github.com/susatwik/Zero-Waste-Recipes-Generator" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="Open Zero Waste Recipe Generator on GitHub">
-                <div class="mockup-stage mockup-knowledge">
+                <div aria-hidden="true" class="mockup-stage mockup-knowledge">
                   <div class="mockup-rag-window">
                     <div class="rag-header-search">
                       <span class="rag-search-text">Ask your ingredients...</span>
@@ -527,7 +531,7 @@
 
             <div class="project-visual-wrapper">
               <a href="https://61.0.228.124/" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="View iMentor Live Demo">
-                <div class="mockup-stage mockup-imentor">
+                <div aria-hidden="true" class="mockup-stage mockup-imentor">
                   <div class="mockup-agent-window">
                     <div class="agent-status-bar">
                       <span class="agent-live-tag"><span class="tag-dot"></span> Socratic Agent Live</span>
@@ -589,7 +593,7 @@
 
             <div class="project-visual-wrapper">
               <a href="https://sasi-idea-lab.vercel.app/" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="View SASI AICTE IDEA Lab CMS Live Demo">
-                <div class="mockup-stage mockup-idealab">
+                <div aria-hidden="true" class="mockup-stage mockup-idealab">
                   <div class="mockup-lab-window">
                     <div class="lab-header-bar">
                       <span class="lab-brand-tag">IDEA LAB · PORTAL</span>
@@ -660,7 +664,7 @@
 
             <div class="project-visual-wrapper">
               <a href="https://github.com/susatwik/stateful-interview-system" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="View HireScale AI repository on GitHub">
-                <div class="mockup-stage mockup-hirescale">
+                <div aria-hidden="true" class="mockup-stage mockup-hirescale">
                   <div class="mockup-eval-window">
                     <div class="eval-top-bar">
                       <span class="eval-role-title">Candidate Evaluation</span>
@@ -728,7 +732,7 @@
 
             <div class="project-visual-wrapper">
               <a href="https://sasi-aicte-idea-lab-attendance.vercel.app/" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="View SASI AICTE IDEA Lab Attendance System Live Demo">
-                <div class="mockup-stage mockup-barcode">
+                <div aria-hidden="true" class="mockup-stage mockup-barcode">
                   <div class="mockup-scanner-window">
                     <div class="scanner-viewfinder">
                       <div class="scanner-laser-line"></div>
@@ -793,7 +797,7 @@
 
             <div class="project-visual-wrapper">
               <a href="https://github.com/susatwik/tcs-nqt-prep-platform" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="View Smart Quiz &amp; Gamification repository on GitHub">
-                <div class="mockup-stage mockup-quiz">
+                <div aria-hidden="true" class="mockup-stage mockup-quiz">
                   <div class="mockup-quiz-window">
                     <div class="quiz-top-bar">
                       <span class="quiz-timer-pill">⏱ 00:08s</span>
@@ -853,7 +857,7 @@
 
             <div class="project-visual-wrapper">
               <a href="https://github.com/susatwik/ecommerce-platform" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="View Modern E-Commerce Store repository on GitHub">
-                <div class="mockup-stage mockup-ecommerce">
+                <div aria-hidden="true" class="mockup-stage mockup-ecommerce">
                   <div class="mockup-store-window">
                     <div class="store-top-bar">
                       <span class="store-brand-text">AURORA STORE</span>
@@ -919,7 +923,7 @@
 
             <div class="project-visual-wrapper">
               <a href="https://recovermate-web.onrender.com" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="Open RecoverMate Live Demo">
-                <div class="mockup-stage mockup-recovermate">
+                <div aria-hidden="true" class="mockup-stage mockup-recovermate">
                   <div class="mockup-chat-window">
                     <div class="chat-window-top">
                       <span class="chat-agent-title">● RecoverMate WhatsApp</span>
@@ -983,7 +987,7 @@
 
             <div class="project-visual-wrapper">
               <a href="https://restaurant-ordering-kitchen.vercel.app/" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="Open RestaurantFlow Live Demo">
-                <div class="mockup-stage mockup-restaurantflow">
+                <div aria-hidden="true" class="mockup-stage mockup-restaurantflow">
                   <div class="mockup-rest-window">
                     <div class="rest-window-top">
                       <span class="rest-title">Kitchen Display · 4 Tickets</span>
@@ -1047,7 +1051,7 @@
 
             <div class="project-visual-wrapper">
               <a href="https://codecrafters-stock-control-hub.lovable.app" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="Open StockEase Live Demo">
-                <div class="mockup-stage mockup-stockease">
+                <div aria-hidden="true" class="mockup-stage mockup-stockease">
                   <div class="mockup-stock-window">
                     <div class="stock-window-top">
                       <span class="stock-title">Stock Intelligence</span>
@@ -1109,7 +1113,7 @@
 
             <div class="project-visual-wrapper">
               <a href="https://diabetes-prediction-app0704.streamlit.app" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="Open Diabetes Prediction Live Demo">
-                <div class="mockup-stage mockup-diabetes">
+                <div aria-hidden="true" class="mockup-stage mockup-diabetes">
                   <div class="mockup-ml-window">
                     <div class="ml-window-top">
                       <span class="ml-title">Streamlit ML Model</span>
@@ -1172,7 +1176,7 @@
 
             <div class="project-visual-wrapper">
               <a href="https://learn-spark-academy-voice.lovable.app" target="_blank" rel="noopener noreferrer" class="mockup-link" aria-label="Open Learn Spark Academy Live Demo">
-                <div class="mockup-stage mockup-learnspark">
+                <div aria-hidden="true" class="mockup-stage mockup-learnspark">
                   <div class="mockup-voice-window">
                     <div class="voice-window-top">
                       <span class="voice-title">Adaptive Voice Agent</span>
