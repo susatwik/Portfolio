@@ -1167,9 +1167,9 @@
       journeyHeader.style.transform = 'none';
     }
 
-    // Phase 2: Path Draw in Lockstep (Progress window: 0.02 to 0.88)
+    // Phase 2: Path Draw in Lockstep (Progress window: 0.02 to 0.72)
     // pathProgress represents the drawn fraction of the SVG curve: 0 to 1.0
-    const pathP = clamp01((p - 0.02) / 0.86);
+    const pathP = clamp01((p - 0.02) / 0.70);
     if (journeyPathCore && journeyPathLength > 0) {
       const dashoffset = journeyPathLength * (1 - pathP);
       journeyPathCore.style.strokeDashoffset = dashoffset.toFixed(1);
@@ -1209,9 +1209,10 @@
       }
     }
 
-    // Phase 4: Bottom Statistics Panel (Reveals smoothly from 0.82 to 0.94 as final card settles)
+    // Phase 4: Bottom Statistics Panel (Reveals smoothly from 0.72 to 0.84 as all cards settle,
+    // and stays 100% visible with full counters until unpinning handoff at 1.0)
     if (journeyStats) {
-      const statsP = clamp01((p - 0.82) / 0.12);
+      const statsP = clamp01((p - 0.72) / 0.12);
       journeyStats.style.opacity = statsP.toFixed(3);
       journeyStats.style.transform = `translateY(${((1 - statsP) * 8).toFixed(1)}px)`;
     }
@@ -1308,20 +1309,21 @@
     // 1. Hero Sticky Track Progress
     if (heroTrack && portraitSystem) {
       const rect = heroTrack.getBoundingClientRect();
-      const scrollDistance = heroTrack.offsetHeight - window.innerHeight;
-      if (scrollDistance > 0) {
-        const progress = Math.max(0, Math.min(1, -rect.top / scrollDistance));
-        portraitSystem.setProgress(progress);
+      const winH = window.innerHeight || 1;
+      const scrollDistance = heroTrack.offsetHeight - winH;
+      const progress = scrollDistance > 0
+        ? Math.max(0, Math.min(1, -rect.top / scrollDistance))
+        : Math.max(0, Math.min(1, -rect.top / (winH * 0.75)));
+      portraitSystem.setProgress(progress);
 
-        // Hero Identity block stays 100% visible throughout hero scroll transition!
-        // Anchored stably without disappearing or clipping.
-        heroTrack.style.setProperty('--caption-opacity', '1');
-        heroTrack.style.setProperty('--caption-offset-y', '0px');
+      // Hero Identity block stays 100% visible throughout hero scroll transition!
+      // Anchored stably without disappearing or clipping.
+      heroTrack.style.setProperty('--caption-opacity', '1');
+      heroTrack.style.setProperty('--caption-offset-y', '0px');
 
-        // Subtle, gentle title parallax
-        const titleOffsetY = -Math.max(0, (progress - 0.40) / 0.60) * 20;
-        heroTrack.style.setProperty('--title-scroll-y', `${titleOffsetY}px`);
-      }
+      // Subtle, gentle title parallax
+      const titleOffsetY = -Math.max(0, (progress - 0.40) / 0.60) * 20;
+      heroTrack.style.setProperty('--title-scroll-y', `${titleOffsetY}px`);
     }
 
     // 2. 01 — About Section Progressive Reveal (Heading lines + Word-by-word paragraph)

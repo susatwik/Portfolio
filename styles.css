@@ -29,7 +29,7 @@ html {
   scroll-padding-top: 86px;
   background-color: var(--bg);
   color: var(--paper);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -40,7 +40,7 @@ body {
   font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
   line-height: 1.6;
 }
 
@@ -228,7 +228,9 @@ button {
    ========================================================================== */
 .hero-scroll-track {
   position: relative;
-  height: 155vh; /* Compact, deliberate scroll travel close to one viewport */
+  height: 100vh;
+  height: 100svh;
+  min-height: 660px;
   background: var(--bg);
 }
 
@@ -3125,6 +3127,7 @@ body.projects-page {
   overflow: hidden;
   max-width: 100%;
   position: relative;
+  padding-bottom: clamp(32px, 4vh, 48px);
 }
 
 .skills-heading {
@@ -3156,7 +3159,7 @@ body.projects-page {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin: 35px 0 70px;
+  margin: 30px 0 clamp(16px, 2.5vh, 28px);
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -6632,20 +6635,19 @@ body:not(.is-intro) .skip-intro {
 
   /* Mobile Hero Layout Hierarchy */
   .hero-scroll-track {
-    height: 100vh;
-    height: 100svh;
+    height: auto;
+    min-height: 100svh;
   }
   .hero-sticky {
     position: relative;
-    height: 100vh;
-    height: 100svh;
-    min-height: 540px;
-    max-height: 940px;
-    padding: 68px 5vw 16px;
+    height: auto;
+    min-height: 100svh;
+    max-height: none;
+    padding: clamp(68px, 9vh, 80px) 5vw clamp(24px, 3.5vh, 32px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     text-align: center;
     overflow: hidden;
   }
@@ -6780,6 +6782,9 @@ body:not(.is-intro) .skip-intro {
   .about-capabilities {
     grid-template-columns: repeat(2, 1fr);
   }
+  .skills {
+    padding-bottom: 24px;
+  }
   .skills-heading {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -6787,8 +6792,8 @@ body:not(.is-intro) .skip-intro {
   }
   .marquee-container,
   .skills-rows-container {
-    gap: 14px;
-    margin: 25px 0 50px;
+    gap: 12px;
+    margin: 20px 0 24px;
   }
   .marquee-pill,
   .skill-badge {
