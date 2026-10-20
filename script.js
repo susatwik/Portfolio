@@ -223,7 +223,10 @@
       const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
 
       if (isMobile) {
-        this.frameSize = Math.min(width * 0.92, height * 0.65, 520);
+        const isSmall = width <= 360;
+        this.frameSize = isSmall
+          ? Math.min(width * 0.65, 220)
+          : Math.min(width * 0.68, Math.max(220, height * 0.35), 275);
       } else if (isTablet) {
         this.frameSize = Math.min(width * 0.78, height * 0.80, 720);
       } else {
@@ -320,7 +323,7 @@
       const headOffset = frameSize * (86 / 1254);
       const targetHeadTop = isMobile ? 66 : Math.max(86, height * 0.10);
       let portraitTop = isMobile
-        ? (height - frameSize - 16)
+        ? (targetHeadTop - headOffset)
         : (targetHeadTop - headOffset);
       if (!isMobile && portraitTop + frameSize > height - 8) {
         portraitTop = Math.max(80 - headOffset, height - frameSize - 8);
@@ -432,7 +435,9 @@
 
       // Settle Y aligned with DOM heading bottom: clamp(165px, 21.5vh, 220px)
       const domBottom = isMobile ? 145 : Math.max(165, Math.min(220, height * 0.215));
-      this.titleSettleY = height - domBottom - titleFontSize * 0.38;
+      this.titleSettleY = isMobile
+        ? (portraitTop + frameSize * 0.88)
+        : (height - domBottom - titleFontSize * 0.38);
       this.titleCenterY = titleCenterY;
 
       // 3. Unify into full-viewport continuous particle simulation
