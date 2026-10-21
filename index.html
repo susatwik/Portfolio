@@ -53,11 +53,15 @@
     <div class="hero-scroll-track" id="hero-track">
       <section class="hero hero-sticky" id="top">
         <div class="hero-ambient-glow" aria-hidden="true"></div>
+        <div class="hero-portrait-halo" aria-hidden="true"></div>
         <p class="hero-eyebrow">COMPUTER SCIENCE <span>·</span> SOFTWARE <span>·</span> AI/ML</p>
 
         <!-- Full-Viewport Particle Canvas (unconstrained, covers full hero width and height) -->
         <canvas class="hero-particle-canvas" id="portrait-canvas" aria-hidden="true"></canvas>
         <img class="hero-portrait-fallback" id="portrait-fallback" src="assets/susatwik-manuri.png" srcset="assets/susatwik-manuri-640.webp 640w, assets/susatwik-manuri.webp 1254w" sizes="(max-width: 768px) 640px, 1254px" alt="Portrait of Susatwik Manuri" fetchpriority="high" width="1254" height="1254" decoding="sync" />
+
+        <!-- Mobile Portrait Slot (reserves exact optical height for the particle portrait) -->
+        <div class="hero-portrait-slot" aria-hidden="true"></div>
 
         <!-- Metallic PORTFOLIO Title -->
         <h1 class="hero-portfolio-word" id="hero-title">PORTFOLIO</h1>
@@ -77,6 +81,14 @@
           <div class="hero-cta-group">
             <a class="hero-explore hero-cta-btn hero-cta-work" href="#work">EXPLORE WORK <span>↗</span></a>
             <a class="hero-talk-btn hero-cta-btn hero-cta-talk" href="#contact">LET’S TALK <span>↗</span></a>
+          </div>
+          <div class="hero-scroll-indicator" aria-hidden="true">
+            <span class="hero-motto">BUILD · EXPLORE · LEARN · INNOVATE</span>
+            <a class="hero-scroll-chevron" href="#about" aria-label="Scroll to About section">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -126,16 +138,22 @@
         <!-- Right Column: Premium Glassmorphism About Panel -->
         <div class="about-copy-col">
           <div class="about-card">
-            <h2 class="about-headline">
+            <div class="mobile-about-header">
+              <span class="mobile-section-tag">[ ABOUT ME ]</span>
+              <h2 class="mobile-about-headline">Turning Ideas into <span class="about-highlight">Impact.</span></h2>
+              <p class="mobile-about-bio">Passionate AI/ML enthusiast and full stack developer with expertise in building intelligent systems, responsive web apps, and scalable solutions.</p>
+            </div>
+
+            <h2 class="about-headline desktop-about-headline">
               <span class="reveal-line" data-line="0">Curiosity is where</span>
               <span class="reveal-line" data-line="1">ideas become</span>
               <span class="reveal-line highlight" data-line="2"><em class="text-reality">reality.</em></span>
             </h2>
 
-            <p class="about-lead">
+            <p class="about-lead desktop-about-text">
               <span class="reveal-word">I'm</span> <span class="reveal-word">Susatwik</span> <span class="reveal-word">Manuri,</span> <span class="reveal-word">a</span> <span class="reveal-word">Computer</span> <span class="reveal-word">Science</span> <span class="reveal-word">and</span> <span class="reveal-word">Engineering</span> <span class="reveal-word">student</span> <span class="reveal-word">focused</span> <span class="reveal-word">on</span> <span class="reveal-word">full-stack</span> <span class="reveal-word">development,</span> <span class="reveal-word">software</span> <span class="reveal-word">engineering,</span> <span class="reveal-word">and</span> <span class="reveal-word">AI/ML.</span> <span class="reveal-word">I</span> <span class="reveal-word">enjoy</span> <span class="reveal-word">transforming</span> <span class="reveal-word">complex</span> <span class="reveal-word">ideas</span> <span class="reveal-word">into</span> <span class="reveal-word">practical,</span> <span class="reveal-word">reliable</span> <span class="reveal-word">applications,</span> <span class="reveal-word">exploring</span> <span class="reveal-word">new</span> <span class="reveal-word">technologies,</span> <span class="reveal-word">and</span> <span class="reveal-word">building</span> <span class="reveal-word">products</span> <span class="reveal-word">that</span> <span class="reveal-word">solve</span> <span class="reveal-word">real</span> <span class="reveal-word">problems.</span>
             </p>
-            <p class="about-body">
+            <p class="about-body desktop-about-text">
               <span class="reveal-word">My</span> <span class="reveal-word">approach</span> <span class="reveal-word">combines</span> <span class="reveal-word">thoughtful</span> <span class="reveal-word">engineering,</span> <span class="reveal-word">continuous</span> <span class="reveal-word">learning,</span> <span class="reveal-word">and</span> <span class="reveal-word">attention</span> <span class="reveal-word">to</span> <span class="reveal-word">user</span> <span class="reveal-word">experience</span> <span class="reveal-word">—</span> <span class="reveal-word">from</span> <span class="reveal-word">designing</span> <span class="reveal-word">clean</span> <span class="reveal-word">interfaces</span> <span class="reveal-word">to</span> <span class="reveal-word">developing</span> <span class="reveal-word">dependable</span> <span class="reveal-word">backend</span> <span class="reveal-word">systems</span> <span class="reveal-word">and</span> <span class="reveal-word">intelligent</span> <span class="reveal-word">applications.</span>
             </p>
 
@@ -148,17 +166,10 @@
                     <polyline points="8 6 2 12 8 18"></polyline>
                   </svg>
                 </span>
-                <span class="capability-label">Full-Stack<br />Development</span>
-              </div>
-
-              <div class="capability-card" role="listitem">
-                <span class="capability-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"></path>
-                    <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z"></path>
-                  </svg>
-                </span>
-                <span class="capability-label">AI / ML<br />Exploration</span>
+                <div class="capability-text-wrap">
+                  <span class="capability-val">3+ Years Learning</span>
+                  <span class="capability-label">Computer Science &amp; AI</span>
+                </div>
               </div>
 
               <div class="capability-card" role="listitem">
@@ -169,24 +180,48 @@
                     <line x1="12" y1="22.08" x2="12" y2="12"></line>
                   </svg>
                 </span>
-                <span class="capability-label">Product<br />Building</span>
+                <div class="capability-text-wrap">
+                  <span class="capability-val">15+ Projects Built</span>
+                  <span class="capability-label">Full Stack &amp; ML</span>
+                </div>
               </div>
 
               <div class="capability-card" role="listitem">
                 <span class="capability-icon" aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"></path>
+                    <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z"></path>
                   </svg>
                 </span>
-                <span class="capability-label">User-Centric<br />Design</span>
+                <div class="capability-text-wrap">
+                  <span class="capability-val">AI/ML Focus Area</span>
+                  <span class="capability-label">Deep Learning, NLP</span>
+                </div>
+              </div>
+
+              <div class="capability-card" role="listitem">
+                <span class="capability-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                  </svg>
+                </span>
+                <div class="capability-text-wrap">
+                  <span class="capability-val">Always Learning</span>
+                  <span class="capability-label">Modern Tech Stacks</span>
+                </div>
               </div>
             </div>
 
+            <!-- Mobile CTA button matching Phone 2 -->
+            <div class="mobile-about-actions">
+              <a class="mobile-about-btn" href="#skills">
+                <span>MORE ABOUT ME</span>
+                <span class="btn-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+
             <!-- Two Polished Primary Call-to-Action Buttons -->
-            <div class="about-actions">
+            <div class="about-actions desktop-about-actions">
               <a class="about-btn about-btn-primary" href="#work" aria-label="Explore my work">
                 <span>Explore my work</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -209,6 +244,14 @@
       <div class="about-foot">
         <span>OPEN TO THOUGHTFUL OPPORTUNITIES</span>
         <span>INDIA · 2026</span>
+      </div>
+
+      <!-- Subtle Cyber Terrain Accent at Bottom of About -->
+      <div class="about-terrain-accent" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 65 L 180 45 L 360 58 L 540 32 L 720 50 L 900 28 L 1080 48 L 1260 35 L 1440 55" stroke="rgba(56, 189, 248, 0.28)" stroke-width="1.2" fill="none" />
+          <path d="M0 75 L 220 58 L 440 68 L 660 48 L 880 62 L 1100 45 L 1320 62 L 1440 52" stroke="rgba(96, 165, 250, 0.16)" stroke-width="0.8" stroke-dasharray="3,4" fill="none" />
+        </svg>
       </div>
     </section>
 
@@ -764,6 +807,129 @@
           </div>
         </div>
 
+      </div>
+
+      <!-- Mobile Dedicated 3-Column Skills Grid View (Shown on Mobile <=768px, matching Phone 3) -->
+      <div class="skills-mobile-view" aria-label="Mobile skills showcase">
+        <div class="skills-mobile-header">
+          <span class="mobile-section-tag">[ TECHNICAL EXPERTISE ]</span>
+          <h3 class="skills-mobile-title">Skills &amp; <span class="skills-highlight">Technologies.</span></h3>
+          <p class="skills-mobile-subtitle">Technologies and tools I work with to build intelligent and scalable systems.</p>
+        </div>
+
+        <!-- Filter category tabs -->
+        <div class="skills-mobile-tabs" role="tablist" aria-label="Filter skills by domain">
+          <button type="button" class="skill-tab-btn is-active" data-cat="all" role="tab" aria-selected="true">All</button>
+          <button type="button" class="skill-tab-btn" data-cat="frontend" role="tab" aria-selected="false">Frontend</button>
+          <button type="button" class="skill-tab-btn" data-cat="backend" role="tab" aria-selected="false">Backend</button>
+          <button type="button" class="skill-tab-btn" data-cat="ai-ml" role="tab" aria-selected="false">AI/ML</button>
+        </div>
+
+        <!-- 3-Column Mobile Skills Grid -->
+        <div class="skills-mobile-grid" id="skills-mobile-grid">
+          <!-- Python -->
+          <div class="skill-card-item" data-category="ai-ml backend">
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M11.91 2c-5.09 0-4.78 2.21-4.78 2.21l.01 2.29h4.87v.69H5.13S2 6.82 2 11.93c0 5.12 2.73 4.94 2.73 4.94h1.63v-2.3s-.09-2.73 2.68-2.73h4.63s2.58.04 2.58-2.52V4.52S16.99 2 11.91 2zm-2.6 1.54a.88.88 0 1 1 0 1.76.88.88 0 0 1 0-1.76z" fill="#3776AB"/><path d="M12.09 22c5.09 0 4.78-2.21 4.78-2.21l-.01-2.29h-4.87v-.69h6.88s3.13.37 3.13-4.74c0-5.12-2.73-4.94-2.73-4.94h-1.63v2.3s.09 2.73-2.68 2.73H10.34s-2.58-.04-2.58 2.52v4.8s-.75 2.52 4.33 2.52zm2.6-1.54a.88.88 0 1 1 0-1.76.88.88 0 0 1 0 1.76z" fill="#FFD438"/></svg>
+            </span>
+            <span class="skill-card-name">Python</span>
+          </div>
+
+          <!-- PyTorch -->
+          <div class="skill-card-item" data-category="ai-ml">
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13.2 2.4a7.8 7.8 0 0 0-4.6 1.5l1.6 1.6a5.5 5.5 0 0 1 3-1 5.7 5.7 0 1 1-5.7 5.7c0-1.1.3-2.1.8-3L6.8 5.6A7.8 7.8 0 1 0 13.2 2.4z" fill="#818CF8"/><circle cx="16.5" cy="5.5" r="1.5" fill="#EE4C2C"/></svg>
+            </span>
+            <span class="skill-card-name">PyTorch</span>
+          </div>
+
+          <!-- React -->
+          <div class="skill-card-item" data-category="frontend">
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.3"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)" stroke="#61DAFB" stroke-width="1.3"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)" stroke="#61DAFB" stroke-width="1.3"/></svg>
+            </span>
+            <span class="skill-card-name">React</span>
+          </div>
+
+          <!-- Next.js -->
+          <div class="skill-card-item" data-category="frontend">
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#000000" stroke="#FFFFFF" stroke-width="1.2"/><path d="M8 7v10h1.8v-5.2l5.4 5.2h2.2L9.8 8.8V7H8z" fill="#FFFFFF"/><path d="M15 7h1.8v5.8L15 11.2V7z" fill="#FFFFFF"/></svg>
+            </span>
+            <span class="skill-card-name">Next.js</span>
+          </div>
+
+          <!-- Node.js -->
+          <div class="skill-card-item" data-category="backend">
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l8.66 5v10L12 22l-8.66-5V7L12 2z" fill="#339933"/><path d="M12 4.4L5.3 8.3v7.5L12 19.6l6.7-3.9V8.3L12 4.4z" fill="#222222"/><path d="M12 6.5l4.8 2.8v5.5L12 17.5l-4.8-2.8V9.3L12 6.5z" fill="#5FA04E"/></svg>
+            </span>
+            <span class="skill-card-name">Node.js</span>
+          </div>
+
+          <!-- FastAPI -->
+          <div class="skill-card-item" data-category="backend ai-ml">
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 13.5h7.2L9 22l11-12.5h-7.2L14 2h-2z" fill="#059669"/></svg>
+            </span>
+            <span class="skill-card-name">FastAPI</span>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card-item" data-category="frontend">
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><path d="M6.5 17.5c.7.4 1.5.7 2.4.7 1.4 0 2.2-.7 2.2-2.1v-6.6H8.7v6.6c0 .7-.3 1-1 1-.4 0-.8-.1-1.2-.3v.7zm6.7-.1c.9.5 2 .8 3.1.8 1.8 0 2.8-.9 2.8-2.2 0-1.3-.8-1.9-2.2-2.5-.9-.4-1.3-.7-1.3-1.2 0-.5.4-.9 1.2-.9.8 0 1.5.3 2 .6l.6-1.5c-.6-.4-1.5-.6-2.5-.6-1.8 0-2.8 1-2.8 2.2 0 1.2.8 1.9 2.2 2.5 1 .4 1.3.8 1.3 1.3 0 .6-.5 1-1.4 1-.9 0-1.8-.4-2.4-.8l-.6 1.3z" fill="#000000"/></svg>
+            </span>
+            <span class="skill-card-name">JavaScript</span>
+          </div>
+
+          <!-- TypeScript -->
+          <div class="skill-card-item" data-category="frontend backend">
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#3178C6"/><path d="M4.5 10.5h6v1.8H8.5v6.2h-2v-6.2H4.5v-1.8zm7.5 7.9c.9.5 2 .8 3.1.8 1.8 0 2.8-.9 2.8-2.2 0-1.3-.8-1.9-2.2-2.5-.9-.4-1.3-.7-1.3-1.2 0-.5.4-.9 1.2-.9.8 0 1.5.3 2 .6l.6-1.5c-.6-.4-1.5-.6-2.5-.6-1.8 0-2.8 1-2.8 2.2 0 1.2.8 1.9 2.2 2.5 1 .4 1.3.8 1.3 1.3 0 .6-.5 1-1.4 1-.9 0-1.8-.4-2.4-.8l-.6 1.3z" fill="#FFFFFF"/></svg>
+            </span>
+            <span class="skill-card-name">TypeScript</span>
+          </div>
+
+          <!-- LangChain -->
+          <div class="skill-card-item" data-category="ai-ml">
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v10l-7 4-7-4V7l7-4z" fill="#1C3C3C" stroke="#2DD4BF" stroke-width="1.4"/><path d="M12 7l4 2.5v5L12 17l-4-2.5v-5L12 7z" fill="#2DD4BF"/></svg>
+            </span>
+            <span class="skill-card-name">LangChain</span>
+          </div>
+
+          <!-- Docker -->
+          <div class="skill-card-item" data-category="backend">
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M2.5 13.5c0-.8.6-1.5 1.5-1.5h16c.8 0 1.5.7 1.5 1.5 0 3.9-3.1 7-7 7-3.9 0-7.3-3.1-7.3-7h-4.7z" fill="#2496ED"/><rect x="6" y="9" width="2" height="2" fill="#2496ED"/><rect x="9" y="9" width="2" height="2" fill="#2496ED"/><rect x="12" y="9" width="2" height="2" fill="#2496ED"/><rect x="9" y="6" width="2" height="2" fill="#2496ED"/><rect x="12" y="6" width="2" height="2" fill="#2496ED"/><rect x="15" y="9" width="2" height="2" fill="#2496ED"/></svg>
+            </span>
+            <span class="skill-card-name">Docker</span>
+          </div>
+
+          <!-- PostgreSQL -->
+          <div class="skill-card-item" data-category="backend">
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="6" rx="8" ry="3" fill="#336791" fill-opacity="0.3" stroke="#336791" stroke-width="1.5"/><path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6" stroke="#336791" stroke-width="1.5"/><path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6" stroke="#336791" stroke-width="1.5"/></svg>
+            </span>
+            <span class="skill-card-name">PostgreSQL</span>
+          </div>
+
+          <!-- Tailwind CSS -->
+          <div class="skill-card-item" data-category="frontend">
+            <span class="skill-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6.5 10.5c1.5-2.5 3.5-3 5-2 1.5 1 2 2.5 3.5 3 1.5.5 3 0 4-1.5-1.5 2.5-3.5 3-5 2-1.5-1-2-2.5-3.5-3-1.5-.5-3 0-4 1.5z" fill="#06B6D4"/><path d="M2.5 15.5c1.5-2.5 3.5-3 5-2 1.5 1 2 2.5 3.5 3 1.5.5 3 0 4-1.5-1.5 2.5-3.5 3-5 2-1.5-1-2-2.5-3.5-3-1.5-.5-3 0-4 1.5z" fill="#06B6D4"/></svg>
+            </span>
+            <span class="skill-card-name">Tailwind</span>
+          </div>
+        </div>
+
+        <div class="skills-mobile-cta">
+          <a class="skills-view-all-btn" href="#journey">
+            <span>VIEW ALL SKILLS</span>
+            <span class="btn-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
       </div>
     </section>
 

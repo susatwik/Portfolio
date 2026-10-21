@@ -1,30 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0E1524" />
-      <stop offset="100%" stop-color="#050608" />
-    </linearGradient>
-    <linearGradient id="smGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#67E8F9" />
-      <stop offset="50%" stop-color="#38BDF8" />
-      <stop offset="100%" stop-color="#4F8CFF" />
-    </linearGradient>
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.6" />
-      <stop offset="100%" stop-color="#4F8CFF" stop-opacity="0.2" />
+    <radialGradient id="smGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.32" />
+      <stop offset="100%" stop-color="#070A10" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="smBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0.4" />
     </linearGradient>
   </defs>
-  <!-- Squircle Base -->
-  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.8" />
-  <!-- Subtle Internal Grid Glow -->
-  <circle cx="32" cy="32" r="22" fill="#38BDF8" fill-opacity="0.08" />
-  <!-- SM Monogram Glyphs (Geometric & Cyber-Tech) -->
-  <g fill="none" stroke="url(#smGrad)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Base Squircle -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#070A10" stroke="url(#smBorder)" stroke-width="1.8" />
+  <!-- Center Ambient Radial Glow -->
+  <circle cx="32" cy="32" r="24" fill="url(#smGlow)" />
+  <!-- SM Monogram Glyphs (High contrast, crisp white strokes) -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round">
     <!-- 'S' Path -->
-    <path d="M 27 22 C 22 21 17 24 17 28 C 17 33 28 32 28 37 C 28 42 22 44 17 42" />
+    <path d="M 28 18 H 18 L 13 23 V 29 L 22 34 V 41 L 18 46 H 12" />
     <!-- 'M' Path -->
-    <path d="M 35 42 V 22 L 42 33 L 49 22 V 42" />
+    <path d="M 33 46 V 18 L 43 36 L 53 18 V 46" />
   </g>
-  <!-- Accent Beacon Point -->
-  <circle cx="51" cy="42" r="1.8" fill="#67E8F9" />
+  <!-- Cyan Accent Beacon -->
+  <circle cx="53" cy="18" r="2.8" fill="#38BDF8" />
+  <circle cx="53" cy="18" r="4.2" stroke="#67E8F9" stroke-width="0.9" fill="none" opacity="0.8" />
 </svg>

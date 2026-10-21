@@ -225,8 +225,8 @@
       if (isMobile) {
         const isSmall = width <= 360;
         this.frameSize = isSmall
-          ? Math.min(width * 0.65, 220)
-          : Math.min(width * 0.68, Math.max(220, height * 0.35), 275);
+          ? Math.min(width * 0.72, 255)
+          : Math.min(width * 0.74, Math.max(240, height * 0.44), 310);
       } else if (isTablet) {
         this.frameSize = Math.min(width * 0.78, height * 0.80, 720);
       } else {
@@ -349,6 +349,15 @@
           const a = imgData[idx + 3] / 255;
           if (a < 0.12) continue;
 
+          // Mobile lower torso fade: smoothly taper particles right across the PORTFOLIO title
+          // to keep the name, title, and bio on crisp dark glass with zero visual interference
+          const yRatio = y / rows;
+          if (isMobile && yRatio > 0.76) continue;
+          const mobileFade = isMobile
+            ? (yRatio < 0.62 ? 1 : Math.max(0, 1 - (yRatio - 0.62) / 0.14))
+            : 1;
+          if (mobileFade <= 0.05) continue;
+
           const lum = (0.299 * imgData[idx] + 0.587 * imgData[idx + 1] + 0.114 * imgData[idx + 2]) / 255;
           if (lum < 0.035) continue;
 
@@ -390,6 +399,8 @@
             alpha = 0.35;
             size = spacing * 0.58;
           }
+
+          alpha *= mobileFade;
 
           portraitPoints.push({
             x, y,
@@ -1590,6 +1601,7 @@
     setupProjectFilters();
     setupProjectsNavigation();
     setupCredentialFilters();
+    setupMobileSkillsTabs();
 
     // Initialize Digital ID Badge 3D Tilt Parallax
     setupBadgeTilt();
@@ -1772,6 +1784,38 @@
         btn.classList.add('is-active');
         btn.setAttribute('aria-selected', 'true');
         updateCredVisibility(filter);
+      });
+    });
+  }
+
+  // ==========================================================================
+  // MOBILE SKILLS TABS CONTROLLER (Phone 3 Category Filtering)
+  // ==========================================================================
+  function setupMobileSkillsTabs() {
+    const tabBtns = document.querySelectorAll('.skill-tab-btn');
+    const skillCards = document.querySelectorAll('.skill-card-item');
+    if (!tabBtns.length || !skillCards.length) return;
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.getAttribute('data-cat');
+        tabBtns.forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+
+        skillCards.forEach(card => {
+          const itemCats = card.getAttribute('data-category') || '';
+          if (cat === 'all' || itemCats.includes(cat)) {
+            card.style.display = 'flex';
+            card.style.opacity = '1';
+          } else {
+            card.style.display = 'none';
+            card.style.opacity = '0';
+          }
+        });
       });
     });
   }
