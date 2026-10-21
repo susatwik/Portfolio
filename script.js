@@ -225,8 +225,8 @@
       if (isMobile) {
         const isSmall = width <= 360;
         this.frameSize = isSmall
-          ? Math.min(width * 0.72, 255)
-          : Math.min(width * 0.74, Math.max(240, height * 0.44), 310);
+          ? Math.min(width * 0.80, 288)
+          : Math.min(width * 0.82, Math.max(265, height * 0.46), 345);
       } else if (isTablet) {
         this.frameSize = Math.min(width * 0.78, height * 0.80, 720);
       } else {
@@ -298,7 +298,7 @@
 
       // 1. Sample Portrait Particles with high-density grid for crisp facial recognition
       const isMobile = window.innerWidth <= 768;
-      const spacing = isMobile ? 2.8 : 2.4;
+      const spacing = isMobile ? 2.3 : 2.4;
       const cols = Math.floor(frameSize / spacing);
       const rows = Math.floor(frameSize / spacing);
 
@@ -352,9 +352,9 @@
           // Mobile lower torso fade: smoothly taper particles right across the PORTFOLIO title
           // to keep the name, title, and bio on crisp dark glass with zero visual interference
           const yRatio = y / rows;
-          if (isMobile && yRatio > 0.76) continue;
+          if (isMobile && yRatio > 0.77) continue;
           const mobileFade = isMobile
-            ? (yRatio < 0.62 ? 1 : Math.max(0, 1 - (yRatio - 0.62) / 0.14))
+            ? (yRatio < 0.60 ? 1 : Math.max(0, 1 - (yRatio - 0.60) / 0.17))
             : 1;
           if (mobileFade <= 0.05) continue;
 
@@ -380,24 +380,24 @@
 
           if (lum >= 0.68) {
             color = rand > 0.35 ? '#F4F7FC' : '#FFFFFF';
-            alpha = 0.96;
-            size = spacing * 0.90;
+            alpha = isMobile ? 0.98 : 0.96;
+            size = spacing * (isMobile ? 0.94 : 0.90);
           } else if (lum >= 0.44) {
-            color = (isEdge || rand > 0.55) ? '#A8D2FF' : '#E4ECF8';
-            alpha = 0.88;
-            size = spacing * 0.84;
+            color = (isEdge || rand > 0.50) ? '#BAE6FD' : (isMobile ? '#FFFFFF' : '#E4ECF8');
+            alpha = isMobile ? 0.94 : 0.88;
+            size = spacing * (isMobile ? 0.90 : 0.84);
           } else if (lum >= 0.22) {
-            color = isEdge ? '#4F8CFF' : (rand > 0.5 ? '#7A96BA' : '#C4CBD6');
-            alpha = 0.78;
-            size = spacing * 0.76;
+            color = isEdge ? '#38BDF8' : (rand > 0.5 ? '#93C5FD' : '#C4CBD6');
+            alpha = isMobile ? 0.88 : 0.78;
+            size = spacing * (isMobile ? 0.84 : 0.76);
           } else if (lum >= 0.08) {
-            color = isEdge ? '#3E7CE8' : (rand > 0.5 ? '#24344D' : '#182436');
-            alpha = 0.55;
-            size = spacing * 0.68;
+            color = isEdge ? '#2563EB' : (rand > 0.5 ? '#1E3A8A' : '#334155');
+            alpha = isMobile ? 0.70 : 0.55;
+            size = spacing * (isMobile ? 0.76 : 0.68);
           } else {
-            color = '#0E1724';
-            alpha = 0.35;
-            size = spacing * 0.58;
+            color = isEdge ? '#1E293B' : '#0B1220';
+            alpha = isMobile ? 0.45 : 0.35;
+            size = spacing * (isMobile ? 0.66 : 0.58);
           }
 
           alpha *= mobileFade;
