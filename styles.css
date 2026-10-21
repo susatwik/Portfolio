@@ -473,8 +473,7 @@ button {
   transform: translate(2px, -2px);
 }
 
-/* Hero Cyber Halo, Portrait Slot & Mobile Scroll Indicator Base Defaults */
-.hero-portrait-halo,
+/* Hero Portrait Slot & Mobile Scroll Indicator Base Defaults */
 .hero-portrait-slot {
   display: none;
 }
@@ -6685,27 +6684,6 @@ body:not(.is-intro) .skip-intro {
     pointer-events: none;
     flex-shrink: 0;
   }
-  .hero-portrait-halo {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: clamp(18px, 3.5vh, 28px);
-    transform: translateX(-50%);
-    width: clamp(220px, 66vw, 280px);
-    height: clamp(220px, 66vw, 280px);
-    border-radius: 50%;
-    border: 1.5px solid rgba(56, 189, 248, 0.45);
-    box-shadow: 0 0 35px rgba(56, 189, 248, 0.28), inset 0 0 25px rgba(56, 189, 248, 0.18);
-    pointer-events: none;
-    z-index: 1;
-  }
-  .hero-portrait-halo::after {
-    content: "";
-    position: absolute;
-    inset: -12px;
-    border-radius: 50%;
-    border: 1px dashed rgba(56, 189, 248, 0.22);
-  }
   .hero-portrait-fallback {
     position: absolute;
     left: 50%;
@@ -7426,11 +7404,6 @@ body:not(.is-intro) .skip-intro {
   }
   .hero-portrait-slot {
     height: clamp(115px, 38vw, 135px);
-  }
-  .hero-portrait-halo {
-    top: 14px;
-    width: 205px;
-    height: 205px;
   }
   .hero-portrait-fallback {
     top: 32px;
